@@ -1,0 +1,485 @@
+/* === NAVIGATION === */
+/* --- breadcrumb --- */
+
+.breadcrumb {
+	padding-left: 15px;
+	color:$opplaDarkGrey;
+	font-size: 0.9em;
+	margin: 0 0 1em 0;
+	clear: both;
+	li:first-child:before {
+						@include icon-font("\e813");
+						color:$opplaDarkGrey;
+					}
+	a:link, a:visited {
+		color: $opplaDarkGrey;
+		text-decoration: none
+	}
+	a:hover {
+		color: $opplaBlue;
+		text-decoration: underline
+	}
+}
+/* --- Menu toggler --- */
+
+.toggler {
+	@include btn-white(1em);
+	float: left;
+	&:before {
+		@include icon-font('\e80e');
+	}
+}
+
+.open .toggler {background: $opplaTint;
+	&:before {
+		@include icon-font('\e80f');
+	}
+}
+
+
+
+@media all and (max-width: 480px) {
+	.toggler span {
+		display: none;
+	}
+}
+
+
+/* --- Mobile/Tablet menu --- */
+
+@media all and (max-width: 768px) {
+	.toggler {
+		display: inline-block
+	}
+	#navigation {
+		display: none;
+	}
+	.open #navigation {
+		display: block;
+		#block-menu-block-1 {
+			background: $opplaBlue;
+			position: absolute;
+			top: 60px;
+			left: 18px;
+			right: 18px;
+			width: auto;
+			z-index: 999;@include opplaLozenge();
+			border: solid 2px $opplaBlue;
+
+			.menu {
+				display: block;
+				background: $opplaTint;
+				text-align: left;
+				
+				li {
+					display: block;
+					float: none;
+					padding: 0;
+					margin: 0;
+					border-top: solid 2px $opplaBlue;
+					&.first {
+						border-top: none;
+					}
+					a {
+						@include headBold;
+						color: $opplaDarkGrey;
+						font-size: 1em;
+						text-decoration: none;
+						text-transform: uppercase;
+						padding: 0.75em 12px;
+						display: block;
+						&:hover {
+							color: $opplaBlack;
+							background:$opplaLightGrey;
+							cursor: pointer;
+						}
+						&.active {
+							background: $opplaBlue;
+							color: #fff;
+							cursor: default;
+						}
+					}
+					&.is-expanded a {
+						//padding-bottom: 4px;
+					}
+					ul {@include opplaKillLozenge();
+						padding: 0;
+						display: block;
+						li {
+							border-top: solid 2px $opplaBlue;
+							a {
+								font-size: 0.75em;
+								//padding: 0.75em 12px;
+								text-transform: none!important;
+							}
+							&.first {
+								border-top: solid 2px $opplaBlue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//#navigation .region-navigation .menu {
+//	.first > a.active {
+//		@include opplaTopLozenge();
+//	}
+//	li .first a.active {
+//		@include opplaTopLozenge();
+//	}
+//	.last > a.active {
+//		@include opplaLowerLozenge();
+//	}
+//	li .last a.active {
+//		@include opplaLowerLozenge();
+//	}
+//}
+/* --- Desktop menu --- */
+
+@media all and (min-width: 768px) {
+	.toggler {
+		display: none
+	}
+	#navigation {
+		border-top: 3px solid $opplaMidGrey;
+		margin: 1em 0  0 0;
+		padding: 1em 0 0 0;
+		width: auto;
+		.region-navigation .menu {
+			display: flex;
+			justify-content: space-around;
+			li {
+				float: none;
+				display: inline-block;
+				padding: 0 0 4px 0;
+				margin: 0 0.5em;
+				border-bottom: 5px solid #fff;
+				
+				&.active, &.is-active-trail.is-parent.has-children {
+					border-color: $opplaBlue;
+					a {
+						color: $opplaBlue;
+					}
+				}
+				&:hover {
+					border-color: $opplaDarkGrey;
+					cursor: pointer
+				}
+				a {
+					@include headBold;
+					color: $opplaDarkGrey;
+					font-size: 0.95em;
+					text-decoration: none;
+					text-transform: uppercase;
+					padding: 0;
+					display: block;
+				}
+				&.first {margin-left:0}
+				&.last {margin-right:0}
+			}
+			.menu {
+				display: none;
+			}
+		}
+	}
+}	
+
+/* --- old IE fix for no flexbox support ---  */
+
+.lt-ie9  #navigation .region-navigation .menu {display:block}
+
+/* === TABS === */
+
+.tabs,
+.tabs li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+/* --- Tabs primary --- */
+
+.tabs-primary {
+	border-bottom: 2px solid $opplaDarkGrey;
+	margin-bottom: 1em;
+	padding: 0;
+	li {
+		background: $opplaDarkMidGrey;
+		display: inline-block;
+		border-bottom: 1px solid #fff;
+		padding: 0.25em 0.75em;
+		list-style: none;
+		margin-bottom: 0;
+		@include opplaTopLozenge();
+		&:first-child {}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.is-active {
+			background: $opplaDarkGrey;
+			border-bottom: 1px solid $opplaDarkGrey;
+			a, &:hover {
+				color: #fff!important;
+				cursor: default;
+			}
+		}
+		a {
+			display: block;
+			@include headBold;
+			color: $opplaDarkGrey;
+			text-decoration: none;
+			&:hover {
+				color: $opplaBlack;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+	.tabs-primary {
+		border-bottom: none;
+		padding: 0;
+		li {
+			@include border-radius(0);
+			display: block;
+			border-bottom: 3px #fff solid;
+			&:first-child {
+				@include opplaTopLozenge();
+			}
+			&:last-child {
+				@include opplaLowerLozenge();
+				border-bottom: none;
+			}
+			&.is-active {
+				border-bottom: 3px #fff solid;
+			}
+		}
+	}
+}
+/* --- Tabs secondary --- */
+
+.tabs-secondary {
+	li {
+		display: inline-block;
+		margin-right: 0.5em;
+		a {
+			@include headBold;
+			color: $opplaDarkGrey;
+			text-decoration: none;
+			border-bottom: 6px solid #fff;
+			padding-bottom: 4px;
+		}
+		a:hover {
+			border-color: $opplaDarkGrey;
+		}
+		a.active,
+		a.active:hover {
+			color: $opplaBlue;
+			border-color: $opplaBlue;
+			cursor: default;
+		}
+	}
+}
+/* --- Footer Menu block --- */
+
+#block-menu-block-3,
+#block-menu-block-2 {
+	margin: 0;
+	ul.menu {
+		padding: 0;
+		margin: 0 0 0.5em -1.5%;
+		width: 101.5%;
+		clear: both;
+		float: none;
+
+		li {
+			border-top: 5px solid #fff;
+			width: 15.11%;
+			margin-left: 1.5%;
+			display: block;
+			float: left;
+			//display: inline-block;
+			.not-logged-in   & {
+					//width: 12.75%;
+				}
+			a {
+				@include headBold;
+				color: $opplaBlack;
+				font-size: 0.9em;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-bottom: 1px solid #fff;
+				padding: 6px 0 5px 0;
+				display: block;
+				&:hover {
+					color: $opplaBlack;
+					text-decoration: underline;
+				}
+				
+			}
+			ul {
+				padding: 0.75em 0.5em 0.75em 0;
+				li {
+					border: none;
+					font-size: 0.8em;
+					display: inline-block;
+					float: none;
+					width: 100%;
+					.not-logged-in   & {
+					//width: 100%;
+				}
+					padding: 0;
+					&:before {
+						@include icon-font('\e817');
+						color: $opplaBlue;
+						font-size: 90%;
+						padding-right: 3px;
+					}
+					a {
+						@include lato55;
+						color: $opplaDarkGrey;
+						text-transform: none;
+						border: none;
+						padding: 0;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* --- Level 2 RH menu --- */
+
+#block-menu-block-5 {
+		
+		margin: 0 0 0 15%;
+		width: 90%;
+		ul.menu ,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu li {
+			margin: 0.75em 0;
+			&:before {
+				@include icon-font('\e817');
+				color: $opplaBlue;
+				font-size: 90%;
+				padding-right: 3px;
+			}
+			a {
+				@include headBold;
+				color: $opplaDarkGrey;
+				font-size: 0.9em;
+				//text-transform: uppercase;
+				text-decoration: none;
+				//display:block;
+				padding: 0.25em 0;
+				border-bottom: 5px solid #fff;
+				&:hover {
+					border-color: $opplaDarkGrey;
+				}
+				&:active {
+					border-color: $opplaBlue;
+					color: $opplaBlue;
+				}
+				&.active {
+					border-color: $opplaBlue;
+					color: $opplaBlue;
+					cursor: default;
+					text-decoration: none
+				}
+			}
+			li {margin: 0.5em 0;
+				a {@include lato55;
+				font-size: 85%;}
+			&:before {
+				content: "";
+			}
+		}
+	}
+}
+
+/* --- QUICKTABS BASIC --- */
+
+.block-quicktabs {
+	clear: both;
+	background: $opplaLightGrey;
+	padding: 0!important;
+	border: 9px solid #fff;
+	fieldset .fieldset-wrapper {
+		background: $opplaLightestGrey;
+		border-bottom:none;
+	}
+	ul.quicktabs-tabs {
+		padding: 0;
+		margin: 0;
+		background: #fff;
+		text-align: center;
+		li {
+			@include opplaTopLozenge();
+			//width: 40%;
+			display: inline-block;
+			padding: 0 0.75em 0.5em 0.75em;
+			margin: 0;
+			&.active {
+				background: $opplaLightGrey;
+			}
+			&:last-child {
+				margin-bottom: 0
+			}
+			a { font-size: 0.9em;
+				@include headBold;
+				color: $opplaDarkGrey;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 0.5em 0 0.125em 0;
+				margin: 0;
+				display: block;
+				text-align: center;
+				border-bottom: 4px solid #fff;
+				&:hover {
+					border-color: $opplaDarkGrey;
+					cursor: pointer;
+				}
+			}
+			&.active a {
+				color: $opplaBlue;
+				border-color: $opplaBlue;
+				cursor: default;
+			}
+		}
+	}
+}
+
+#block-quicktabs-community-filters {
+	fieldset .fieldset-wrapper {
+		@include opplaRedTint;
+	}
+	.views-exposed-widget .bef-toggle {
+		color: $opplaRed!important;
+		&:hover {
+			color: $opplaDarkGrey!important;
+		}
+	}
+	ul.quicktabs-tabs li {
+		a {
+			color: $opplaDarkGrey;
+			&:hover {
+				border-color: $opplaDarkGrey;
+				cursor: pointer;
+			}
+		}
+		&.active a {
+			color: $opplaRed;
+			border-color: $opplaRed;
+			cursor: default;
+		}
+	}
+}

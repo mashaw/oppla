@@ -1,0 +1,80 @@
+
+#block-menu-menu-social-links,
+#block-menu-block-4 {
+	margin: 0 1em 0 0;
+	padding: 0;
+	.menu {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li {
+			padding: 0;
+			margin: 0 .25rem 0 0;
+			displaY: INLINE-BLOCK;
+		}
+		li.last {
+			margin-right: 0
+		}
+		a {
+			font-family: 'oppla_icons';
+			color: #fff;
+			background: $opplaMidGrey;
+			height: 36px;
+			width: 36px;
+			text-indent: 0;
+			displaY: BLOCK;
+			padding: 0;
+			margin: 0;
+			font-size: 0;
+			line-height: 1;
+			text-decoration: none;
+			text-align: left;
+			@include border-radius(50%);
+		}
+		li a.twitter:after {
+			@include icon-font('\e802');
+		}
+		li a.mail:after {
+			@include icon-font('\e800');
+		}
+		li a.linkedin:after {
+			@include icon-font('\e808');
+		}
+		li a.youtube:after {
+			@include icon-font('\e810');
+		}
+		li a:after {
+			font-size: 20px!important;
+			line-height: 36px!important;
+			padding-left: 0.2em!important;
+		}
+		li a:hover {
+			background: $opplaBlue;
+		}
+	}
+}
+#block-menu-block-4 {display: none}
+
+@media all and (max-width: 768px) {
+	#block-menu-block-4 {
+		display: block;
+		float: left;
+		margin: 1em 0;
+		.menu {
+			text-align: center;
+			li a {
+				color: #fff;
+				background: $opplaDarkMidGrey;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 625px) {
+	#block-menu-block-4 {
+		clear: both;float:none;
+		.menu {
+			text-align: center;
+		}
+	}
+}

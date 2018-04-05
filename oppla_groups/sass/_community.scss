@@ -1,0 +1,432 @@
+.page-user,
+.node-profile.view-mode-full,
+.page-user-profile,
+.page-member {
+	h2.node__title {
+		display: none
+	}
+	h2 {
+		color: #fff;
+		background: $opplaRed;
+		padding: 0.5em 120px 0.5em 0.5em;
+		@include opplaTopLozenge;
+		position: relative;
+		margin: 0;
+		img {
+			position: absolute;
+			top: 6px;
+			right: 12px;
+			@include border-radius(50%);
+			border: 2px solid $opplaRed;
+			width: 100px;
+			height: 100px;
+			float: right;
+			margin: 0;
+			@include lato55;
+			font-size:0.5em;
+			line-height:2;
+			text-align: center;
+			vertical-align: middle
+		}
+		@media all and (min-width: 768px) {
+			padding-right: 160px;
+			img {
+				border: 3px solid $opplaRed;
+				width: 140px;
+				height: 140px;
+
+			}
+		}
+	}
+	h4 {
+		display: none
+	}
+	h3 {
+		.profile {
+			.field .field-label {
+				color: $opplaDarkGrey;
+				font-size: 1em
+			}
+		}
+	}
+}
+
+.view-community .views-field-field-image img {
+	@include border-radius(50%);
+	border: 5px solid $opplaRed;
+	width: 125px;
+	height: 125px;
+	float: right;
+	margin: -75px 0.5em 0 0;
+}
+
+.imagefield-crop-widget img {
+	max-width: none;
+	vertical-align: baseline;
+	vertical-align: bottom;
+}
+
+
+/* === COMMUNITY VIEW === */
+
+.page-user,
+.page-member,
+.page-community {
+	#page {
+		background: #ededed;
+		.header_wrapper {
+			background: #fff;
+			padding-bottom: 5px
+		}
+	}
+	@media all and (min-width: 650px) and (max-width: 960px){
+		.view-id-similarterms.view-display-id-entity_view_1 .view-content,
+		.view-community-nodes.view-display-id-page .view-content {
+			display: flex;
+			flex-wrap: wrap;
+			.views-row {
+				display: flex;
+				flex-direction: column;
+				width: 48%;
+				margin-right: 0;
+				padding-right: 1.5%;
+				@include divider(right);
+				border-collapse: collapse;
+				float: left;
+				&.views-row-odd {
+					clear: left
+				}
+				&.views-row-even,
+				&:last-child {
+					margin-right: 0;
+					padding-right: 0;
+					margin-left: 0;
+					padding-left: 1.5%;
+					border-right: none;
+				}
+				&:nth-child(1),
+				&:nth-child(2) {
+					padding-top: 0
+				}
+				.wrapper {}
+				//							p.base {
+				//  flex: 1 0 auto;
+				//}
+			}
+		}
+	}
+		@media all and (min-width: 960px) {
+		//.view-profiles.view-display-id-page_1 .view-content ,
+		.view-id-similarterms.view-display-id-entity_view_1 .view-content,
+		.view-community-nodes.view-display-id-page .view-content {
+			display: flex;
+			flex-wrap: wrap;
+			.views-row {
+				display: flex;
+				flex-direction: column;
+				width: 48%;
+				margin-right: 0;
+				padding-right: 1.5%;
+				@include divider(right);
+				border-collapse: collapse;
+				float: left;
+				&.views-row-odd {
+					clear: left
+				}
+				&.views-row-even,
+				&:last-child {
+					margin-right: 0;
+					padding-right: 0;
+					margin-left: 0;
+					padding-left: 1.5%;
+					border-right: none;
+				}
+				&:nth-child(1),
+				&:nth-child(2) {
+					padding-top: 0
+				}
+				.wrapper {}
+				//							p.base {
+				//  flex: 1 0 auto;
+				//}
+			}
+		}
+	}
+	
+	
+	
+	
+	h1.page__title {
+		color: $opplaRed;
+	}
+}
+
+.page-member .sidebar,
+.page-community .sidebar {
+	padding: 0;
+	fieldset {
+		margin: 0.25em 0;
+	}
+	.block {
+		margin-bottom: 0px;
+		//background: #fff;
+		padding: 10px;
+		//.block {padding:0;}
+		.form-item .description {
+			font-size: 1em;
+			legend {
+				padding-top: 1em;
+				color: $opplaDarkGrey;
+				font-size: 1em;
+				//line-height: 1.2;
+				text-transform: uppercase;
+				margin: -3px 0 0.5em 0;
+				//border-top: 3px solid $opplaDarkGrey;
+			}
+		}
+		.views-exposed-form .views-exposed-widget {
+			margin: 0
+		}
+		.views-exposed-widget.views-widget-filter-combine input {border-color:$opplaRed;@include opplaRedTint;
+			&:focus {background:#fff}}
+
+		.bef-toggle {
+			padding-left: 5px
+		}
+		.bef-checkboxes {
+			padding: 0.25em 0.5em
+		}
+		input[type="reset"],
+		input[type="submit"] {
+			font-size: 1em;
+			border-color: $opplaRed;
+			color: $opplaRed!important;
+			&:hover {
+				color: #fff!important;
+				background: $opplaRed!important;
+			}
+			&:active {
+				color: #fff!important;
+				background: $opplaDarkRed!important;
+				border-color: $opplaDarkRed!important;
+			}
+			input[type="reset"] {
+				float: right
+			}
+		}
+	}
+}
+
+.page-user,
+.node-profile.view-mode-full,
+.page-user-profile,
+.page-member {
+	.sidebar {
+		background: transparent;
+	}
+	
+	.view-display-id-entity_view_4 {}
+
+	.wrapper {
+		background: #fff;
+		margin: 0;
+		padding: 1em;
+		@include opplaLowerLozenge;
+		   .field-label {color:$opplaRed;}
+			.fieldset-wrapper   .field-label {color:$opplaDarkGrey;}
+		.field {
+			&.field-type-text {
+				margin-bottom: 0;
+				padding-bottom: 0.5em;
+			}
+			&.field-type-text-with-summary   {
+				padding-bottom: 0.5em;
+				border-bottom: 2px solid $opplaRed;
+			}
+		}
+		&.interests {
+			margin-top: 0;
+			padding-top: 1em;
+		}
+	}
+	@media all and (min-width: 768px) {
+		.wrapper {
+			padding-right: 175px;
+		}
+	}
+
+	.sidebar {
+		fieldset {
+			margin: 0.25em 0;
+		}
+		.view-email-and-flag-block {
+			margin-bottom: 0;
+			padding: 0;
+			margin: 0 0 1em 0;
+			> .view-content > .views-row {
+				padding: 1em 0;
+				background: #fff;
+				@include opplaLozenge;
+				.views-field-mail,
+				.views-field-ops {@include divider(right);
+					width: 35%;
+					display: inline-block;
+					text-align: center;
+					margin-bottom: 0em;
+					padding-bottom: 0em;
+					border-bottom: none;
+					.flag {
+						@include btn-red(1em);
+						font-size: 0;
+						padding: 4px 2px;
+						background: #fff;
+						&:after {
+							font-size: 24px;
+							line-height: 1.2;
+						}
+					}
+				}
+				.views-field-mail {
+					border-right:none;
+					width: 60%;
+					display: inline-block;
+					
+					.btn {
+						font-size: 24px;
+						line-height: 1.2;
+						background: #fff;
+					}
+				}
+			}
+		}
+	}
+	.block__title {
+		font-size: 1em;
+		color: $opplaRed;
+		text-align: center;
+		background: transparent;
+		padding: 0;
+	}
+	.view__title {
+		font-size: 1.5em;
+		color: $opplaRed;
+		padding: 0;
+		margin: 1em 0;
+	}
+}
+
+	.views-row.community-teaser {
+	padding: 0.75em 0;
+	margin: 0;
+	@include divider(top);
+	&.views-row-1 {
+		border: none
+	}
+	&.views-row-2 {
+		@media all and (min-width: 768px) {
+			border: none
+		}
+	}
+	.field.field-name-field-profile-image {
+		margin: 0;
+	}
+	h2 {
+		color: $opplaRed;
+		@include opplaRedTint;
+		@include opplaTopLozenge;
+		font-size: 1em;
+		padding: 1em 90px 1em 1em;
+		margin: 0;
+		position: relative;
+		img {
+			@include border-radius(50%);
+			border: 5px solid $opplaRed;
+			border-width: 2px;
+			width: 75px;
+			height: 75px;
+			margin: 0;
+			position: absolute;
+			top: 6px;
+			right: 12px;
+			@include lato55;
+			font-size:0.85em;
+			line-height:2;
+			text-align: center;
+			vertical-align: middle
+		}
+	}
+	.wrapper {
+		background: #fff;
+		padding: 1em;
+		margin: 0 0 0em 0;
+		@include opplaLowerLozenge;
+		.field,
+		p {
+			font-size: 1em;
+			margin-bottom: 0.5em;
+			.country {
+				float: left;
+				width: 70%;
+				border-bottom: 2px solid $opplaRed;
+				padding-bottom: 0.5em;
+			}
+			.morebtn {
+				font-size: 1em;
+				text-align: center;
+				float: right;
+				width: 25%;
+				//margin-top:1em
+			}
+		
+		}
+		.field_organisation ,
+		.field-name-field-organisation   {padding-right:90px;min-height:1.75em}
+
+	}
+		
+	&.products {
+		h2 {
+			color: $opplaBlue;
+			background: #d5ecef;
+			img {
+				border-color: $opplaBlue;
+			}
+		}
+		.wrapper {padding: 1em 0;
+			p {
+				.country {
+					border-color: $opplaBlue;;
+				}
+				.morebtn .btn.red.small {
+					border-color: $opplaBlue!important;
+					color: $opplaBlue!important;
+					&:hover {background: $opplaBlue!important;
+					color: #fff!important;}
+					&:active {background: $opplaDarkBlue!important;
+						border-color: $opplaDarkBlue!important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-community .sidebar {
+	background: #fff;
+}
+
+.page-member .sidebar {
+	.block {
+		padding: 0
+	}
+}
+
+.sidebar .views-row.community-teaser.views-row-2 {
+	@include divider(top);
+	font-size: 110%;
+}
+
+.group-other-interests .field-item:before {
+	@include icon-font('\e801');
+	color: $opplaRed;
+}

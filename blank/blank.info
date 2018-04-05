@@ -1,0 +1,23 @@
+name = Blank
+description = A blank theme without regions for embedded content.
+
+
+
+ stylesheets[all][] = style.css
+
+core = 7.x
+engine = phptemplate
+
+
+
+base theme  = oppla
+
+regions[content]        = Content
+regions[sidebar_second] = Second sidebar
+
+; Information added by drupal.org packaging script on 2011-07-14
+version = "7.x-1.x"
+core = "7.x"
+project = "blank"
+
+

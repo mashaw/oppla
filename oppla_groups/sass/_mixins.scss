@@ -1,0 +1,442 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+		clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+	}
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+	position: static !important;
+	clip: auto;
+	height: auto;
+	width: auto;
+	overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+	@include element-invisible;
+	&:active,
+	&:focus {
+		@include element-invisible-off;
+	}
+}
+
+
+
+/*/ === Colours === /*/
+
+$opplaBlue:#00aaad;
+$opplaDarkBlue:rgb(0, 73, 77);
+$opplaTint:#d5ecef;
+$opplaDarkGrey:#6D6E71;
+$opplaDarkMidGrey:#bcbdc0;
+$opplaMidGrey:#dcddde;
+$opplaLightGrey:#ededed;
+$opplaLightestGrey:#f7f7f7;
+$opplaSand:#ebe0dc;
+$opplaBlack:#242424;
+$opplaGold:rgb(201, 172, 104);
+$opplaError: rgb(153, 0, 0);
+$opplaRed: #dc5641;
+$opplaDarkRed:rgb(77, 0, 15);
+@mixin opplaRedTint {
+	background-color: tint($opplaRed , 80%);
+}
+
+
+
+
+/*/ === Fonts === /*/
+
+@mixin headReg {
+	font-family:'montserrat-regular', sans-serif;
+	font-weight:normal;
+	font-style:normal;
+}
+
+@mixin headBold {
+	font-family:'montserrat-semibold', sans-serif;
+	font-weight:normal;
+	font-style:normal;
+}
+
+@mixin lato55 {
+	font-family:'lato-regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin lato56 {
+	font-family:'lato-italic', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin lato75 {
+	font-family:'lato-heavy', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin lato76 {
+	font-family:'lato-heavy-italic', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*/ === Shapes === /*/
+
+
+
+@mixin borderStyle() {
+	border-bottom: 2px solid $opplaDarkGrey;
+	-moz-border-bottom: 4px dotted $opplaDarkGrey;
+}
+
+
+@mixin divider($side) {
+	border-#{$side}: 4px dotted $opplaDarkMidGrey;
+}
+
+@mixin test() {
+	border: 1px dotted  $opplaError;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin opplaLozenge() {
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+@mixin opplaTopLozenge() {
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+@mixin opplaLowerLozenge() {
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+@mixin opplaKillLozenge() {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-right-radius: 0;
+	-moz-border-radius-bottomright: 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0
+}
+
+@mixin icon-font($content) {
+	content: $content;
+	font-family: "oppla_icons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin: 0 .25em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+@mixin icon-font2($content) {
+	content: $content;
+  font-family: 'oppla_icons_2';
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin: 0 .25em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+@mixin langFlag($flag) {
+	padding-left: 27px;
+	background:  url('flags/#{$flag}.png') no-repeat 0px 3px;
+	background-size: 20px 12px;
+}
+
+@mixin menu-style($fontsize) {
+	color: $darkGrey!important;
+	@include headBold;
+	font-size: $fontsize;
+	text-transform: uppercase;
+	text-decoration: none!important;
+}
+
+@mixin btn-white($fontsize) {
+	@include headBold;
+	font-size: $fontsize;
+	text-transform: uppercase;
+	color: $opplaBlue!important;
+	display: inline-block;
+	background: #fff;
+	border: 2px solid $opplaBlue;
+	@include opplaLozenge();
+	padding: 0.15em 0.4em;
+	text-decoration: none!important;
+	&:hover {
+		background: $opplaBlue!important;
+		text-decoration: none!important;
+		color: #fff!important;
+		cursor: pointer
+	}
+	&:active {
+		transition: all 0.1s linear;
+		background: $opplaDarkBlue!important;
+		border-color: $opplaDarkBlue!important;
+		color: #fff!important;
+		cursor: pointer
+	}
+}
+
+@mixin btn-blue($fontsize) {
+	@include btn-white($fontsize);
+	color: $opplaDarkBlue!important;
+	background: $opplaBlue;
+	border-color: $opplaDarkBlue;
+	&:hover {
+		color: $opplaDarkBlue!important;
+		border-color: $opplaDarkBlue;
+		background: #fff!important;
+	}
+	&:active {
+		color: #fff!important;
+		border-color: $opplaDarkBlue!important;
+		background: $opplaDarkBlue!important;
+	}
+}
+
+@mixin btn-red($fontsize) {
+	@include btn-white($fontsize);
+	color: $opplaRed!important;
+	border-color: $opplaRed!important;
+	&:hover {
+		background: $opplaRed!important;
+	}
+	&:active {
+		background: $opplaDarkRed!important;
+		border-color: $opplaDarkRed!important;
+	}
+}
+
+@mixin bullets($colour) {
+	position: relative;
+	margin-bottom: 3px;
+	list-style: none;
+	padding: 0;
+	&:before {
+		position: absolute;
+		content: " \2022";
+		color: $colour;
+		left: -1em;
+		top: 0
+	}
+}
+
+@mixin background($imgpath, $position:center center, $repeat: no-repeat) {
+	background: {
+		image: url($imgpath);
+		position: $position;
+		repeat: $repeat;
+	}
+}
+
+@mixin noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin two-column() {
+	float: left;
+	margin-left: 1.5%!important;
+	width: 48.5%;
+	&:nth-child(odd) {
+		clear: left;
+	}
+	@media all and (max-width: 768px) {
+		width: 98.5%;
+		float: none;
+		clear: both;
+	}
+}
+
+@mixin three-column() {
+	float: left;
+	margin-left: 1.5%!important;
+	width: 31.833%;
+	&:nth-child(3n-2) {
+		clear: left
+	}
+	@media all and (max-width: 768px) {
+		width: 98.5%;
+		float: none;
+		clear: both;
+	}
+}
+
+@mixin four-column() {
+	float: left;
+	width: 23.5%;
+	margin-left: 1.5%!important;
+	&:nth-child(4n-7) {
+		clear: left;
+	}
+	@media all and (max-width: 768px) {
+		width: 48.5%;
+		clear: none;
+		&:nth-child(odd) {
+			clear: left;
+			&:last-child {
+				width: 98.5%
+			}
+		}
+	}
+	@media all and (max-width: 480px) {
+		width: 98.5%;
+		float: none;
+		clear: both;
+	}
+}
+
+@mixin five-column() {
+	float: left;
+	width: 18.5%;
+	margin-left: 1.5%!important;
+	&:nth-child(5n-9) {
+		clear: left
+	}
+	@media all and (max-width: 768px) {
+		width: 48.5%;
+		clear: none;
+		&:nth-child(odd) {
+			clear: left;
+			&:last-child {
+				width: 98.5%
+			}
+		}
+	}
+	@media all and (max-width: 480px) {
+		width: 98.5%;
+		float: none;
+		clear: both;
+	}
+}
+
+@mixin six-column() {
+	float: left;
+	width: 15.16666%;
+	margin-left: 1.5%!important;
+	&:nth-child(6n-5) {
+		clear: left;
+	}
+	@media all and (max-width: 768px) {
+		width: 48.5%;
+		clear: none;
+		&:nth-child(odd) {
+			clear: left;
+		}
+	}
+	@media all and (max-width: 480px) {
+		width: 98.5%;
+		float: none;
+		clear: both;
+	}
+}
+
+@mixin eight-column() {
+	float: left;
+	width: 11%;
+	margin-left: 1.5%!important;
+	&:nth-child(8n-15) {
+		clear: left;
+	}
+	@media all and (max-width: 960px) {
+		width: 23.5%;
+		clear: none;
+		&:nth-child(4n-7) {
+			clear: left;
+		}
+	}
+	@media all and (max-width: 768px) {
+		width: 48.5%;
+		clear: none;
+		&:nth-child(odd) {
+			clear: left;
+			&:last-child {
+				width: 98.5%;
+			}
+		}
+	}
+	@media all and (max-width: 480px) {
+		width: 98.5%;
+		float: none;
+		clear: both;
+	}
+}

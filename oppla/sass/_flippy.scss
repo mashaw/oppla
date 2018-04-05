@@ -1,0 +1,75 @@
+/*/  --- Read more/Flippy pagers ---  /*/
+
+
+
+
+.flippy,
+.flippy li {
+	padding: 0!important;
+}
+
+.flippy {
+	clear: both;
+	margin: 1em 0
+}
+
+li.prev,
+li.next {
+	padding: 0
+}
+
+li.prev {
+	float: left
+}
+
+li.next,
+.read-more {
+	float: right;
+	clear:right;
+}
+
+.flippy li.empty {
+	display: none
+}
+
+.read-more a,
+.flippy li a {
+	font-size: 1em;
+	color: $opplaBlue;
+@include headBold;
+	text-transform: uppercase;
+	text-decoration: none
+}
+
+
+.read-more .strong {
+	font-weight: normal;
+}
+
+.flippy li.prev a {
+	padding-left: 0.125em;
+	@include opplaTopLozenge();
+}
+
+.flippy li.next a {
+	padding-right: 0.125em;
+	@include opplaTopLozenge();
+}
+
+.flippy li.prev a:before,
+.flippy li.next a:after,
+.read-more a:after {
+	@include icon-font('\e814');
+}
+
+.flippy li.prev a:before {
+	@include icon-font('\e813');
+}
+
+.flippy li.prev a:hover,
+.flippy li.next a:hover,
+.read-more a:hover {
+	color: $opplaDarkGrey;
+	text-decoration: none;
+}
+.read-more {padding-bottom:1em}
