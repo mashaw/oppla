@@ -140,4 +140,92 @@
 	}
 }
 
+//$opplaGrpPlum:Plum ;
+//$opplaGrpOrange:Orange ;
+//$opplaGrpBlue: DodgerBlue;
+//$opplaGrpRed: FireBrick; 
+@mixin groupText($groupColour) {
+    background-color: tint($groupColour, 90%);
+    .ok,
+    .messages--status {
+        background: $groupColour!important;
+    }
+    h1.page__title,
+    h2,
+    h3,
+    dt,
+    .field .field-label,
+    legend ,
+    
+    .theme_group.node-type-group .sidebar .item-list ul li:before  {
+        color: $groupColour!important;
+    }
+     :not(.tabs-primary) a:link,
+     :not(.tabs-primary) a:visited {
+        color: $groupColour;
+    }
+    .masquerade-switch,
+    .more-link,
+    .btn,
+    button,
+    
+    
+   input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    
+    
+    
+    .block-quicktabs ul.quicktabs-tabs li.active a,
+    &.theme_group.node-type-group .sidebar .subscribe_link a {
+        color: $groupColour!important;
+        border-color: $groupColour!important;
+    }
+    &.theme_group.node-type-group .sidebar .subscribe_link a,
+    .masquerade-switch,
+    .more-link,
+    .btn,
+    button ,
+       input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        &:hover {
+            color: #fff!important;
+            background: $groupColour!important;
+        }
+        &:active {
+            color: #fff!important;
+            background: $opplaBlack!important;
+            border-color: $opplaBlack!important;
+        }
+    }
+    .views-row.community-teaser.products h2 {
+        color: $groupColour;
+        background-color: tint($groupColour, 80%);
+        img {
+            border-color: $groupColour!important;
+        }
+    }
+    .tabs-primary__tab a {
+        color: #fff!important;
+    }
+    //--Close--    
+}
+html,
+body {
+    &:not(.cke_editable) {
+        &.orange    {
+            @include groupText($opplaGrpOrange);
+        }
+        &.plum {
+             @include groupText($opplaGrpPlum);
+        }
+        &.dodger-blue   {
+             @include groupText($opplaGrpBlue);
+        }
+        &.fire-brick  {
+             @include groupText($opplaGrpRed);
+        }
+    }
+}
 
