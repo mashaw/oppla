@@ -7969,16 +7969,47 @@ a.clickable-terms:active {
   margin-top: 0.5em;
 }
 /* line 21, ../sass/_groups.scss */
-.theme_group.node-type-group #page {
+.theme_group.node-type-post #content.column {
+  background: #fff;
+}
+/* line 23, ../sass/_groups.scss */
+.theme_group.node-type-post #content.column h1.page__title {
+  padding: 12px 12px 0 12px;
+}
+/* line 27, ../sass/_groups.scss */
+.theme_group ul.tabs-primary {
+  margin: 0 12px 12px 12px;
+}
+/* line 30, ../sass/_groups.scss */
+.theme_group.node-type-post #page, .theme_group.node-type-group #page {
   background: #ededed;
 }
-/* line 24, ../sass/_groups.scss */
-.theme_group.node-type-group #page h1.page__title.title img {
+/* line 34, ../sass/_groups.scss */
+.theme_group.node-type-post #page .block-quicktabs, .theme_group.node-type-group #page .block-quicktabs {
+  border: 12px solid #fff;
+}
+/* line 37, ../sass/_groups.scss */
+.theme_group.node-type-post #page .view-og-extras-nodes, .theme_group.node-type-group #page .view-og-extras-nodes {
+  border-top: 3px #ededed solid;
+  background: #fff;
+}
+/* line 40, ../sass/_groups.scss */
+.theme_group.node-type-post #page .view-og-extras-nodes h2.title, .theme_group.node-type-group #page .view-og-extras-nodes h2.title {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+/* line 44, ../sass/_groups.scss */
+.theme_group.node-type-post #page .view-og-extras-nodes .node-teaser h2, .theme_group.node-type-group #page .view-og-extras-nodes .node-teaser h2 {
+  font-size: 1.25em;
+  margin: 1em 0 0.5em 0;
+}
+/* line 51, ../sass/_groups.scss */
+.theme_group.node-type-post #page h1.page__title.title img, .theme_group.node-type-group #page h1.page__title.title img {
   vertical-align: middle;
   margin: 0.5em 1em 0.5em 0;
 }
-/* line 29, ../sass/_groups.scss */
-.theme_group.node-type-group #page .view-mode-full {
+/* line 56, ../sass/_groups.scss */
+.theme_group.node-type-post #page .view-mode-full, .theme_group.node-type-group #page .view-mode-full {
   background: #fff;
   padding: 0 15px 15px 15px;
   -moz-border-radius-topleft: 4px;
@@ -7994,8 +8025,8 @@ a.clickable-terms:active {
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-/* line 33, ../sass/_groups.scss */
-.theme_group.node-type-group #page .view-mode-full .field-name-field-banner-image {
+/* line 60, ../sass/_groups.scss */
+.theme_group.node-type-post #page .view-mode-full .field-name-field-banner-image, .theme_group.node-type-group #page .view-mode-full .field-name-field-banner-image {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -8004,48 +8035,43 @@ a.clickable-terms:active {
   border-top-right-radius: 4px;
   margin: 0 -15px 0 -15px;
 }
-/* line 39, ../sass/_groups.scss */
-.theme_group.node-type-group #page .view-og-extras-nodes h2.title {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-/* line 42, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .region.sidebar {
+/* line 68, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .region.sidebar, .theme_group.node-type-group .sidebar .region.sidebar {
   background: #fff;
   padding: 5px 15px 5px 15px;
   margin-bottom: 15px;
 }
-/* line 46, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .region.sidebar .block {
+/* line 72, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .region.sidebar .block, .theme_group.node-type-group .sidebar .region.sidebar .block {
   background: #fff;
 }
-/* line 48, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .region.sidebar .block h3 {
+/* line 74, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .region.sidebar .block h3, .theme_group.node-type-group .sidebar .region.sidebar .block h3 {
   color: #6d6e71;
   font-size: 1.25em;
   margin: 1em 0 1em 0;
 }
-/* line 55, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .item-list ul {
+/* line 81, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .item-list ul, .theme_group.node-type-group .sidebar .item-list ul {
   padding-left: 1em;
 }
-/* line 57, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .item-list ul li {
+/* line 83, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .item-list ul li, .theme_group.node-type-group .sidebar .item-list ul li {
   position: relative;
   margin-bottom: 3px;
   list-style: none;
   padding: 0;
 }
 /* line 302, ../sass/_mixins.scss */
-.theme_group.node-type-group .sidebar .item-list ul li:before {
+.theme_group.node-type-post .sidebar .item-list ul li:before, .theme_group.node-type-group .sidebar .item-list ul li:before {
   position: absolute;
   content: " \2022";
   color: #00aaad;
   left: -1em;
   top: 0;
 }
-/* line 62, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .subscribe_link a {
+/* line 88, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .subscribe_link a, .theme_group.node-type-group .sidebar .subscribe_link a {
   font-family: 'montserrat-semibold', sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -8071,53 +8097,53 @@ a.clickable-terms:active {
   text-decoration: none !important;
 }
 /* line 252, ../sass/_mixins.scss */
-.theme_group.node-type-group .sidebar .subscribe_link a:hover {
+.theme_group.node-type-post .sidebar .subscribe_link a:hover, .theme_group.node-type-group .sidebar .subscribe_link a:hover {
   background: #00aaad !important;
   text-decoration: none !important;
   color: #fff !important;
   cursor: pointer;
 }
 /* line 258, ../sass/_mixins.scss */
-.theme_group.node-type-group .sidebar .subscribe_link a:active {
+.theme_group.node-type-post .sidebar .subscribe_link a:active, .theme_group.node-type-group .sidebar .subscribe_link a:active {
   transition: all 0.1s linear;
   background: #00494d !important;
   border-color: #00494d !important;
   color: #fff !important;
   cursor: pointer;
 }
-/* line 65, ../sass/_groups.scss */
-.theme_group.node-type-group .sidebar .subscribe_link span.group.manager {
+/* line 91, ../sass/_groups.scss */
+.theme_group.node-type-post .sidebar .subscribe_link span.group.manager, .theme_group.node-type-group .sidebar .subscribe_link span.group.manager {
   font-size: 1.2em;
 }
-/* line 74, ../sass/_groups.scss */
+/* line 100, ../sass/_groups.scss */
 .theme_group .node-post.node-teaser h2.page__title.title img,
 .theme_group .node-group.node-teaser h2.page__title.title img {
   vertical-align: middle;
   margin: 0.5em 1em 0.5em 0;
 }
-/* line 79, ../sass/_groups.scss */
+/* line 105, ../sass/_groups.scss */
 .theme_group .node-post.node-teaser .more-link,
 .theme_group .node-group.node-teaser .more-link {
   font-size: 1em;
   float: right;
 }
-/* line 84, ../sass/_groups.scss */
+/* line 110, ../sass/_groups.scss */
 .theme_group .view-users-profiles-on-comments .views-field-created,
 .theme_group .view-users-on-comments .views-field-created {
   color: #bcbdc0;
   margin: -1em 0 1em 0;
 }
-/* line 88, ../sass/_groups.scss */
+/* line 114, ../sass/_groups.scss */
 .theme_group .view-users-profiles-on-comments .views-field-created .views-label,
 .theme_group .view-users-on-comments .views-field-created .views-label {
   color: #bcbdc0;
   font-family: 'lato-regular', sans-serif;
 }
-/* line 93, ../sass/_groups.scss */
+/* line 119, ../sass/_groups.scss */
 .theme_group .group-members .views-row.community-teaser.products {
   padding: 0.5em 0;
 }
-/* line 95, ../sass/_groups.scss */
+/* line 121, ../sass/_groups.scss */
 .theme_group .group-members .views-row.community-teaser.products h2 {
   font-size: 16px;
   line-height: 2;
@@ -8125,7 +8151,7 @@ a.clickable-terms:active {
   padding: 0.5em 0.5em;
   margin: 0;
 }
-/* line 102, ../sass/_groups.scss */
+/* line 128, ../sass/_groups.scss */
 .theme_group .group-members .views-row.community-teaser.products h2 img {
   display: block;
   vertical-align: middle;
@@ -8137,15 +8163,15 @@ a.clickable-terms:active {
   height: 60px;
   margin: -1.15em 5px -1.15em 0;
 }
-/* line 115, ../sass/_groups.scss */
+/* line 141, ../sass/_groups.scss */
 .theme_group .views-field-field-file-upload-multi .file-icon {
   display: none;
 }
-/* line 118, ../sass/_groups.scss */
+/* line 144, ../sass/_groups.scss */
 .theme_group .node-type-group .sidebar .views-field-field-file-upload-multi .item-list ul {
   padding-left: 0;
 }
-/* line 120, ../sass/_groups.scss */
+/* line 146, ../sass/_groups.scss */
 .theme_group .node-type-group .sidebar .views-field-field-file-upload-multi .item-list ul li:before {
   position: relative;
   left: auto;
@@ -8167,22 +8193,22 @@ a.clickable-terms:active {
   margin-right: 0em;
   fomt-size: 2em;
 }
-/* line 128, ../sass/_groups.scss */
+/* line 154, ../sass/_groups.scss */
 .theme_group .field-name-og-group-ref {
   margin: 1em 0;
 }
-/* line 129, ../sass/_groups.scss */
+/* line 156, ../sass/_groups.scss */
 .theme_group .field-name-og-group-ref .field-label {
   padding: 0.15em 0;
   font-size: 1.125em;
   margin: 0 1em 0 0;
 }
-/* line 133, ../sass/_groups.scss */
+/* line 161, ../sass/_groups.scss */
 .theme_group .field-name-og-group-ref .field-item {
   display: inline-block;
   margin-right: 1em;
 }
-/* line 136, ../sass/_groups.scss */
+/* line 164, ../sass/_groups.scss */
 .theme_group .field-name-og-group-ref .field-item a {
   font-family: 'montserrat-semibold', sans-serif;
   font-weight: normal;
@@ -8224,51 +8250,55 @@ a.clickable-terms:active {
   cursor: pointer;
 }
 
-/* line 217, ../sass/_groups.scss */
-html:not(.cke_editable).orange,
+/* line 246, ../sass/_groups.scss */
+html.orange,
 body:not(.cke_editable).orange {
   background-color: #fff6e6;
 }
-/* line 149, ../sass/_groups.scss */
-html:not(.cke_editable).orange .ok,
-html:not(.cke_editable).orange .messages--status,
+/* line 174, ../sass/_groups.scss */
+html.orange .ok,
+html.orange .messages--status,
 body:not(.cke_editable).orange .ok,
 body:not(.cke_editable).orange .messages--status {
   background: Orange !important;
 }
-/* line 153, ../sass/_groups.scss */
-html:not(.cke_editable).orange h1.page__title,
-html:not(.cke_editable).orange h2,
-html:not(.cke_editable).orange h3,
-html:not(.cke_editable).orange dt,
-html:not(.cke_editable).orange .field .field-label,
-html:not(.cke_editable).orange legend,
-html:not(.cke_editable).orange .theme_group.node-type-group .sidebar .item-list ul li:before,
+/* line 178, ../sass/_groups.scss */
+html.orange h1.page__title,
+html.orange h2,
+html.orange h3,
+html.orange dt,
+html.orange .field .field-label,
+html.orange legend, html.orange.theme_group.node-type-group .sidebar .item-list ul li:before,
 body:not(.cke_editable).orange h1.page__title,
 body:not(.cke_editable).orange h2,
 body:not(.cke_editable).orange h3,
 body:not(.cke_editable).orange dt,
 body:not(.cke_editable).orange .field .field-label,
 body:not(.cke_editable).orange legend,
-body:not(.cke_editable).orange .theme_group.node-type-group .sidebar .item-list ul li:before {
+body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .item-list ul li:before {
   color: Orange !important;
 }
-/* line 163, ../sass/_groups.scss */
-html:not(.cke_editable).orange :not(.tabs-primary) a:link,
-html:not(.cke_editable).orange :not(.tabs-primary) a:visited,
+/* line 187, ../sass/_groups.scss */
+html.orange :not(.tabs-primary) a:link,
+html.orange :not(.tabs-primary) a:visited,
 body:not(.cke_editable).orange :not(.tabs-primary) a:link,
 body:not(.cke_editable).orange :not(.tabs-primary) a:visited {
   color: Orange;
 }
-/* line 167, ../sass/_groups.scss */
-html:not(.cke_editable).orange .masquerade-switch,
-html:not(.cke_editable).orange .more-link,
-html:not(.cke_editable).orange .btn,
-html:not(.cke_editable).orange button,
-html:not(.cke_editable).orange input[type="button"],
-html:not(.cke_editable).orange input[type="reset"],
-html:not(.cke_editable).orange input[type="submit"],
-html:not(.cke_editable).orange .block-quicktabs ul.quicktabs-tabs li.active a, html:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a,
+/* line 192, ../sass/_groups.scss */
+html.orange .block-quicktabs ul.quicktabs-tabs li.active a,
+body:not(.cke_editable).orange .block-quicktabs ul.quicktabs-tabs li.active a {
+  color: Orange !important;
+  border-color: Orange !important;
+}
+/* line 196, ../sass/_groups.scss */
+html.orange .masquerade-switch,
+html.orange .more-link,
+html.orange .btn,
+html.orange button,
+html.orange input[type="button"],
+html.orange input[type="reset"],
+html.orange input[type="submit"], html.orange.theme_group.node-type-group .sidebar .subscribe_link a,
 body:not(.cke_editable).orange .masquerade-switch,
 body:not(.cke_editable).orange .more-link,
 body:not(.cke_editable).orange .btn,
@@ -8276,113 +8306,114 @@ body:not(.cke_editable).orange button,
 body:not(.cke_editable).orange input[type="button"],
 body:not(.cke_editable).orange input[type="reset"],
 body:not(.cke_editable).orange input[type="submit"],
-body:not(.cke_editable).orange .block-quicktabs ul.quicktabs-tabs li.active a,
 body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a {
   color: Orange !important;
   border-color: Orange !important;
 }
-/* line 192, ../sass/_groups.scss */
-html:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a:hover,
-html:not(.cke_editable).orange .masquerade-switch:hover,
-html:not(.cke_editable).orange .more-link:hover,
-html:not(.cke_editable).orange .btn:hover,
-html:not(.cke_editable).orange button:hover,
-html:not(.cke_editable).orange input[type="button"]:hover,
-html:not(.cke_editable).orange input[type="reset"]:hover,
-html:not(.cke_editable).orange input[type="submit"]:hover,
-body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a:hover,
+/* line 215, ../sass/_groups.scss */
+html.orange .masquerade-switch:hover,
+html.orange .more-link:hover,
+html.orange .btn:hover,
+html.orange button:hover,
+html.orange input[type="button"]:hover,
+html.orange input[type="reset"]:hover,
+html.orange input[type="submit"]:hover, html.orange.theme_group.node-type-group .sidebar .subscribe_link a:hover,
 body:not(.cke_editable).orange .masquerade-switch:hover,
 body:not(.cke_editable).orange .more-link:hover,
 body:not(.cke_editable).orange .btn:hover,
 body:not(.cke_editable).orange button:hover,
 body:not(.cke_editable).orange input[type="button"]:hover,
 body:not(.cke_editable).orange input[type="reset"]:hover,
-body:not(.cke_editable).orange input[type="submit"]:hover {
+body:not(.cke_editable).orange input[type="submit"]:hover,
+body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a:hover {
   color: #fff !important;
   background: Orange !important;
 }
-/* line 196, ../sass/_groups.scss */
-html:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a:active,
-html:not(.cke_editable).orange .masquerade-switch:active,
-html:not(.cke_editable).orange .more-link:active,
-html:not(.cke_editable).orange .btn:active,
-html:not(.cke_editable).orange button:active,
-html:not(.cke_editable).orange input[type="button"]:active,
-html:not(.cke_editable).orange input[type="reset"]:active,
-html:not(.cke_editable).orange input[type="submit"]:active,
-body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a:active,
+/* line 219, ../sass/_groups.scss */
+html.orange .masquerade-switch:active,
+html.orange .more-link:active,
+html.orange .btn:active,
+html.orange button:active,
+html.orange input[type="button"]:active,
+html.orange input[type="reset"]:active,
+html.orange input[type="submit"]:active, html.orange.theme_group.node-type-group .sidebar .subscribe_link a:active,
 body:not(.cke_editable).orange .masquerade-switch:active,
 body:not(.cke_editable).orange .more-link:active,
 body:not(.cke_editable).orange .btn:active,
 body:not(.cke_editable).orange button:active,
 body:not(.cke_editable).orange input[type="button"]:active,
 body:not(.cke_editable).orange input[type="reset"]:active,
-body:not(.cke_editable).orange input[type="submit"]:active {
+body:not(.cke_editable).orange input[type="submit"]:active,
+body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_link a:active {
   color: #fff !important;
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 202, ../sass/_groups.scss */
-html:not(.cke_editable).orange .views-row.community-teaser.products h2,
+/* line 225, ../sass/_groups.scss */
+html.orange .views-row.community-teaser.products h2,
 body:not(.cke_editable).orange .views-row.community-teaser.products h2 {
   color: Orange;
   background-color: #ffedcc;
 }
-/* line 205, ../sass/_groups.scss */
-html:not(.cke_editable).orange .views-row.community-teaser.products h2 img,
+/* line 228, ../sass/_groups.scss */
+html.orange .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).orange .views-row.community-teaser.products h2 img {
   border-color: Orange !important;
 }
-/* line 209, ../sass/_groups.scss */
-html:not(.cke_editable).orange .tabs-primary__tab a,
+/* line 232, ../sass/_groups.scss */
+html.orange .tabs-primary__tab a,
 body:not(.cke_editable).orange .tabs-primary__tab a {
   color: #fff !important;
 }
-/* line 220, ../sass/_groups.scss */
-html:not(.cke_editable).plum,
+/* line 249, ../sass/_groups.scss */
+html.plum,
 body:not(.cke_editable).plum {
   background-color: #fcf6fc;
 }
-/* line 149, ../sass/_groups.scss */
-html:not(.cke_editable).plum .ok,
-html:not(.cke_editable).plum .messages--status,
+/* line 174, ../sass/_groups.scss */
+html.plum .ok,
+html.plum .messages--status,
 body:not(.cke_editable).plum .ok,
 body:not(.cke_editable).plum .messages--status {
   background: Plum !important;
 }
-/* line 153, ../sass/_groups.scss */
-html:not(.cke_editable).plum h1.page__title,
-html:not(.cke_editable).plum h2,
-html:not(.cke_editable).plum h3,
-html:not(.cke_editable).plum dt,
-html:not(.cke_editable).plum .field .field-label,
-html:not(.cke_editable).plum legend,
-html:not(.cke_editable).plum .theme_group.node-type-group .sidebar .item-list ul li:before,
+/* line 178, ../sass/_groups.scss */
+html.plum h1.page__title,
+html.plum h2,
+html.plum h3,
+html.plum dt,
+html.plum .field .field-label,
+html.plum legend, html.plum.theme_group.node-type-group .sidebar .item-list ul li:before,
 body:not(.cke_editable).plum h1.page__title,
 body:not(.cke_editable).plum h2,
 body:not(.cke_editable).plum h3,
 body:not(.cke_editable).plum dt,
 body:not(.cke_editable).plum .field .field-label,
 body:not(.cke_editable).plum legend,
-body:not(.cke_editable).plum .theme_group.node-type-group .sidebar .item-list ul li:before {
+body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .item-list ul li:before {
   color: Plum !important;
 }
-/* line 163, ../sass/_groups.scss */
-html:not(.cke_editable).plum :not(.tabs-primary) a:link,
-html:not(.cke_editable).plum :not(.tabs-primary) a:visited,
+/* line 187, ../sass/_groups.scss */
+html.plum :not(.tabs-primary) a:link,
+html.plum :not(.tabs-primary) a:visited,
 body:not(.cke_editable).plum :not(.tabs-primary) a:link,
 body:not(.cke_editable).plum :not(.tabs-primary) a:visited {
   color: Plum;
 }
-/* line 167, ../sass/_groups.scss */
-html:not(.cke_editable).plum .masquerade-switch,
-html:not(.cke_editable).plum .more-link,
-html:not(.cke_editable).plum .btn,
-html:not(.cke_editable).plum button,
-html:not(.cke_editable).plum input[type="button"],
-html:not(.cke_editable).plum input[type="reset"],
-html:not(.cke_editable).plum input[type="submit"],
-html:not(.cke_editable).plum .block-quicktabs ul.quicktabs-tabs li.active a, html:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a,
+/* line 192, ../sass/_groups.scss */
+html.plum .block-quicktabs ul.quicktabs-tabs li.active a,
+body:not(.cke_editable).plum .block-quicktabs ul.quicktabs-tabs li.active a {
+  color: Plum !important;
+  border-color: Plum !important;
+}
+/* line 196, ../sass/_groups.scss */
+html.plum .masquerade-switch,
+html.plum .more-link,
+html.plum .btn,
+html.plum button,
+html.plum input[type="button"],
+html.plum input[type="reset"],
+html.plum input[type="submit"], html.plum.theme_group.node-type-group .sidebar .subscribe_link a,
 body:not(.cke_editable).plum .masquerade-switch,
 body:not(.cke_editable).plum .more-link,
 body:not(.cke_editable).plum .btn,
@@ -8390,113 +8421,114 @@ body:not(.cke_editable).plum button,
 body:not(.cke_editable).plum input[type="button"],
 body:not(.cke_editable).plum input[type="reset"],
 body:not(.cke_editable).plum input[type="submit"],
-body:not(.cke_editable).plum .block-quicktabs ul.quicktabs-tabs li.active a,
 body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a {
   color: Plum !important;
   border-color: Plum !important;
 }
-/* line 192, ../sass/_groups.scss */
-html:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a:hover,
-html:not(.cke_editable).plum .masquerade-switch:hover,
-html:not(.cke_editable).plum .more-link:hover,
-html:not(.cke_editable).plum .btn:hover,
-html:not(.cke_editable).plum button:hover,
-html:not(.cke_editable).plum input[type="button"]:hover,
-html:not(.cke_editable).plum input[type="reset"]:hover,
-html:not(.cke_editable).plum input[type="submit"]:hover,
-body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a:hover,
+/* line 215, ../sass/_groups.scss */
+html.plum .masquerade-switch:hover,
+html.plum .more-link:hover,
+html.plum .btn:hover,
+html.plum button:hover,
+html.plum input[type="button"]:hover,
+html.plum input[type="reset"]:hover,
+html.plum input[type="submit"]:hover, html.plum.theme_group.node-type-group .sidebar .subscribe_link a:hover,
 body:not(.cke_editable).plum .masquerade-switch:hover,
 body:not(.cke_editable).plum .more-link:hover,
 body:not(.cke_editable).plum .btn:hover,
 body:not(.cke_editable).plum button:hover,
 body:not(.cke_editable).plum input[type="button"]:hover,
 body:not(.cke_editable).plum input[type="reset"]:hover,
-body:not(.cke_editable).plum input[type="submit"]:hover {
+body:not(.cke_editable).plum input[type="submit"]:hover,
+body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a:hover {
   color: #fff !important;
   background: Plum !important;
 }
-/* line 196, ../sass/_groups.scss */
-html:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a:active,
-html:not(.cke_editable).plum .masquerade-switch:active,
-html:not(.cke_editable).plum .more-link:active,
-html:not(.cke_editable).plum .btn:active,
-html:not(.cke_editable).plum button:active,
-html:not(.cke_editable).plum input[type="button"]:active,
-html:not(.cke_editable).plum input[type="reset"]:active,
-html:not(.cke_editable).plum input[type="submit"]:active,
-body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a:active,
+/* line 219, ../sass/_groups.scss */
+html.plum .masquerade-switch:active,
+html.plum .more-link:active,
+html.plum .btn:active,
+html.plum button:active,
+html.plum input[type="button"]:active,
+html.plum input[type="reset"]:active,
+html.plum input[type="submit"]:active, html.plum.theme_group.node-type-group .sidebar .subscribe_link a:active,
 body:not(.cke_editable).plum .masquerade-switch:active,
 body:not(.cke_editable).plum .more-link:active,
 body:not(.cke_editable).plum .btn:active,
 body:not(.cke_editable).plum button:active,
 body:not(.cke_editable).plum input[type="button"]:active,
 body:not(.cke_editable).plum input[type="reset"]:active,
-body:not(.cke_editable).plum input[type="submit"]:active {
+body:not(.cke_editable).plum input[type="submit"]:active,
+body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_link a:active {
   color: #fff !important;
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 202, ../sass/_groups.scss */
-html:not(.cke_editable).plum .views-row.community-teaser.products h2,
+/* line 225, ../sass/_groups.scss */
+html.plum .views-row.community-teaser.products h2,
 body:not(.cke_editable).plum .views-row.community-teaser.products h2 {
   color: Plum;
   background-color: #f8ecf8;
 }
-/* line 205, ../sass/_groups.scss */
-html:not(.cke_editable).plum .views-row.community-teaser.products h2 img,
+/* line 228, ../sass/_groups.scss */
+html.plum .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).plum .views-row.community-teaser.products h2 img {
   border-color: Plum !important;
 }
-/* line 209, ../sass/_groups.scss */
-html:not(.cke_editable).plum .tabs-primary__tab a,
+/* line 232, ../sass/_groups.scss */
+html.plum .tabs-primary__tab a,
 body:not(.cke_editable).plum .tabs-primary__tab a {
   color: #fff !important;
 }
-/* line 223, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue,
+/* line 252, ../sass/_groups.scss */
+html.dodger-blue,
 body:not(.cke_editable).dodger-blue {
   background-color: #e9f4ff;
 }
-/* line 149, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue .ok,
-html:not(.cke_editable).dodger-blue .messages--status,
+/* line 174, ../sass/_groups.scss */
+html.dodger-blue .ok,
+html.dodger-blue .messages--status,
 body:not(.cke_editable).dodger-blue .ok,
 body:not(.cke_editable).dodger-blue .messages--status {
   background: DodgerBlue !important;
 }
-/* line 153, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue h1.page__title,
-html:not(.cke_editable).dodger-blue h2,
-html:not(.cke_editable).dodger-blue h3,
-html:not(.cke_editable).dodger-blue dt,
-html:not(.cke_editable).dodger-blue .field .field-label,
-html:not(.cke_editable).dodger-blue legend,
-html:not(.cke_editable).dodger-blue .theme_group.node-type-group .sidebar .item-list ul li:before,
+/* line 178, ../sass/_groups.scss */
+html.dodger-blue h1.page__title,
+html.dodger-blue h2,
+html.dodger-blue h3,
+html.dodger-blue dt,
+html.dodger-blue .field .field-label,
+html.dodger-blue legend, html.dodger-blue.theme_group.node-type-group .sidebar .item-list ul li:before,
 body:not(.cke_editable).dodger-blue h1.page__title,
 body:not(.cke_editable).dodger-blue h2,
 body:not(.cke_editable).dodger-blue h3,
 body:not(.cke_editable).dodger-blue dt,
 body:not(.cke_editable).dodger-blue .field .field-label,
 body:not(.cke_editable).dodger-blue legend,
-body:not(.cke_editable).dodger-blue .theme_group.node-type-group .sidebar .item-list ul li:before {
+body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .item-list ul li:before {
   color: DodgerBlue !important;
 }
-/* line 163, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue :not(.tabs-primary) a:link,
-html:not(.cke_editable).dodger-blue :not(.tabs-primary) a:visited,
+/* line 187, ../sass/_groups.scss */
+html.dodger-blue :not(.tabs-primary) a:link,
+html.dodger-blue :not(.tabs-primary) a:visited,
 body:not(.cke_editable).dodger-blue :not(.tabs-primary) a:link,
 body:not(.cke_editable).dodger-blue :not(.tabs-primary) a:visited {
   color: DodgerBlue;
 }
-/* line 167, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue .masquerade-switch,
-html:not(.cke_editable).dodger-blue .more-link,
-html:not(.cke_editable).dodger-blue .btn,
-html:not(.cke_editable).dodger-blue button,
-html:not(.cke_editable).dodger-blue input[type="button"],
-html:not(.cke_editable).dodger-blue input[type="reset"],
-html:not(.cke_editable).dodger-blue input[type="submit"],
-html:not(.cke_editable).dodger-blue .block-quicktabs ul.quicktabs-tabs li.active a, html:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a,
+/* line 192, ../sass/_groups.scss */
+html.dodger-blue .block-quicktabs ul.quicktabs-tabs li.active a,
+body:not(.cke_editable).dodger-blue .block-quicktabs ul.quicktabs-tabs li.active a {
+  color: DodgerBlue !important;
+  border-color: DodgerBlue !important;
+}
+/* line 196, ../sass/_groups.scss */
+html.dodger-blue .masquerade-switch,
+html.dodger-blue .more-link,
+html.dodger-blue .btn,
+html.dodger-blue button,
+html.dodger-blue input[type="button"],
+html.dodger-blue input[type="reset"],
+html.dodger-blue input[type="submit"], html.dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a,
 body:not(.cke_editable).dodger-blue .masquerade-switch,
 body:not(.cke_editable).dodger-blue .more-link,
 body:not(.cke_editable).dodger-blue .btn,
@@ -8504,113 +8536,114 @@ body:not(.cke_editable).dodger-blue button,
 body:not(.cke_editable).dodger-blue input[type="button"],
 body:not(.cke_editable).dodger-blue input[type="reset"],
 body:not(.cke_editable).dodger-blue input[type="submit"],
-body:not(.cke_editable).dodger-blue .block-quicktabs ul.quicktabs-tabs li.active a,
 body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a {
   color: DodgerBlue !important;
   border-color: DodgerBlue !important;
 }
-/* line 192, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:hover,
-html:not(.cke_editable).dodger-blue .masquerade-switch:hover,
-html:not(.cke_editable).dodger-blue .more-link:hover,
-html:not(.cke_editable).dodger-blue .btn:hover,
-html:not(.cke_editable).dodger-blue button:hover,
-html:not(.cke_editable).dodger-blue input[type="button"]:hover,
-html:not(.cke_editable).dodger-blue input[type="reset"]:hover,
-html:not(.cke_editable).dodger-blue input[type="submit"]:hover,
-body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:hover,
+/* line 215, ../sass/_groups.scss */
+html.dodger-blue .masquerade-switch:hover,
+html.dodger-blue .more-link:hover,
+html.dodger-blue .btn:hover,
+html.dodger-blue button:hover,
+html.dodger-blue input[type="button"]:hover,
+html.dodger-blue input[type="reset"]:hover,
+html.dodger-blue input[type="submit"]:hover, html.dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:hover,
 body:not(.cke_editable).dodger-blue .masquerade-switch:hover,
 body:not(.cke_editable).dodger-blue .more-link:hover,
 body:not(.cke_editable).dodger-blue .btn:hover,
 body:not(.cke_editable).dodger-blue button:hover,
 body:not(.cke_editable).dodger-blue input[type="button"]:hover,
 body:not(.cke_editable).dodger-blue input[type="reset"]:hover,
-body:not(.cke_editable).dodger-blue input[type="submit"]:hover {
+body:not(.cke_editable).dodger-blue input[type="submit"]:hover,
+body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:hover {
   color: #fff !important;
   background: DodgerBlue !important;
 }
-/* line 196, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:active,
-html:not(.cke_editable).dodger-blue .masquerade-switch:active,
-html:not(.cke_editable).dodger-blue .more-link:active,
-html:not(.cke_editable).dodger-blue .btn:active,
-html:not(.cke_editable).dodger-blue button:active,
-html:not(.cke_editable).dodger-blue input[type="button"]:active,
-html:not(.cke_editable).dodger-blue input[type="reset"]:active,
-html:not(.cke_editable).dodger-blue input[type="submit"]:active,
-body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:active,
+/* line 219, ../sass/_groups.scss */
+html.dodger-blue .masquerade-switch:active,
+html.dodger-blue .more-link:active,
+html.dodger-blue .btn:active,
+html.dodger-blue button:active,
+html.dodger-blue input[type="button"]:active,
+html.dodger-blue input[type="reset"]:active,
+html.dodger-blue input[type="submit"]:active, html.dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:active,
 body:not(.cke_editable).dodger-blue .masquerade-switch:active,
 body:not(.cke_editable).dodger-blue .more-link:active,
 body:not(.cke_editable).dodger-blue .btn:active,
 body:not(.cke_editable).dodger-blue button:active,
 body:not(.cke_editable).dodger-blue input[type="button"]:active,
 body:not(.cke_editable).dodger-blue input[type="reset"]:active,
-body:not(.cke_editable).dodger-blue input[type="submit"]:active {
+body:not(.cke_editable).dodger-blue input[type="submit"]:active,
+body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:active {
   color: #fff !important;
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 202, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue .views-row.community-teaser.products h2,
+/* line 225, ../sass/_groups.scss */
+html.dodger-blue .views-row.community-teaser.products h2,
 body:not(.cke_editable).dodger-blue .views-row.community-teaser.products h2 {
   color: DodgerBlue;
   background-color: #d2e9ff;
 }
-/* line 205, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue .views-row.community-teaser.products h2 img,
+/* line 228, ../sass/_groups.scss */
+html.dodger-blue .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).dodger-blue .views-row.community-teaser.products h2 img {
   border-color: DodgerBlue !important;
 }
-/* line 209, ../sass/_groups.scss */
-html:not(.cke_editable).dodger-blue .tabs-primary__tab a,
+/* line 232, ../sass/_groups.scss */
+html.dodger-blue .tabs-primary__tab a,
 body:not(.cke_editable).dodger-blue .tabs-primary__tab a {
   color: #fff !important;
 }
-/* line 226, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick,
+/* line 255, ../sass/_groups.scss */
+html.fire-brick,
 body:not(.cke_editable).fire-brick {
   background-color: #f7e9e9;
 }
-/* line 149, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick .ok,
-html:not(.cke_editable).fire-brick .messages--status,
+/* line 174, ../sass/_groups.scss */
+html.fire-brick .ok,
+html.fire-brick .messages--status,
 body:not(.cke_editable).fire-brick .ok,
 body:not(.cke_editable).fire-brick .messages--status {
   background: FireBrick !important;
 }
-/* line 153, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick h1.page__title,
-html:not(.cke_editable).fire-brick h2,
-html:not(.cke_editable).fire-brick h3,
-html:not(.cke_editable).fire-brick dt,
-html:not(.cke_editable).fire-brick .field .field-label,
-html:not(.cke_editable).fire-brick legend,
-html:not(.cke_editable).fire-brick .theme_group.node-type-group .sidebar .item-list ul li:before,
+/* line 178, ../sass/_groups.scss */
+html.fire-brick h1.page__title,
+html.fire-brick h2,
+html.fire-brick h3,
+html.fire-brick dt,
+html.fire-brick .field .field-label,
+html.fire-brick legend, html.fire-brick.theme_group.node-type-group .sidebar .item-list ul li:before,
 body:not(.cke_editable).fire-brick h1.page__title,
 body:not(.cke_editable).fire-brick h2,
 body:not(.cke_editable).fire-brick h3,
 body:not(.cke_editable).fire-brick dt,
 body:not(.cke_editable).fire-brick .field .field-label,
 body:not(.cke_editable).fire-brick legend,
-body:not(.cke_editable).fire-brick .theme_group.node-type-group .sidebar .item-list ul li:before {
+body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .item-list ul li:before {
   color: FireBrick !important;
 }
-/* line 163, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick :not(.tabs-primary) a:link,
-html:not(.cke_editable).fire-brick :not(.tabs-primary) a:visited,
+/* line 187, ../sass/_groups.scss */
+html.fire-brick :not(.tabs-primary) a:link,
+html.fire-brick :not(.tabs-primary) a:visited,
 body:not(.cke_editable).fire-brick :not(.tabs-primary) a:link,
 body:not(.cke_editable).fire-brick :not(.tabs-primary) a:visited {
   color: FireBrick;
 }
-/* line 167, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick .masquerade-switch,
-html:not(.cke_editable).fire-brick .more-link,
-html:not(.cke_editable).fire-brick .btn,
-html:not(.cke_editable).fire-brick button,
-html:not(.cke_editable).fire-brick input[type="button"],
-html:not(.cke_editable).fire-brick input[type="reset"],
-html:not(.cke_editable).fire-brick input[type="submit"],
-html:not(.cke_editable).fire-brick .block-quicktabs ul.quicktabs-tabs li.active a, html:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a,
+/* line 192, ../sass/_groups.scss */
+html.fire-brick .block-quicktabs ul.quicktabs-tabs li.active a,
+body:not(.cke_editable).fire-brick .block-quicktabs ul.quicktabs-tabs li.active a {
+  color: FireBrick !important;
+  border-color: FireBrick !important;
+}
+/* line 196, ../sass/_groups.scss */
+html.fire-brick .masquerade-switch,
+html.fire-brick .more-link,
+html.fire-brick .btn,
+html.fire-brick button,
+html.fire-brick input[type="button"],
+html.fire-brick input[type="reset"],
+html.fire-brick input[type="submit"], html.fire-brick.theme_group.node-type-group .sidebar .subscribe_link a,
 body:not(.cke_editable).fire-brick .masquerade-switch,
 body:not(.cke_editable).fire-brick .more-link,
 body:not(.cke_editable).fire-brick .btn,
@@ -8618,65 +8651,62 @@ body:not(.cke_editable).fire-brick button,
 body:not(.cke_editable).fire-brick input[type="button"],
 body:not(.cke_editable).fire-brick input[type="reset"],
 body:not(.cke_editable).fire-brick input[type="submit"],
-body:not(.cke_editable).fire-brick .block-quicktabs ul.quicktabs-tabs li.active a,
 body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a {
   color: FireBrick !important;
   border-color: FireBrick !important;
 }
-/* line 192, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:hover,
-html:not(.cke_editable).fire-brick .masquerade-switch:hover,
-html:not(.cke_editable).fire-brick .more-link:hover,
-html:not(.cke_editable).fire-brick .btn:hover,
-html:not(.cke_editable).fire-brick button:hover,
-html:not(.cke_editable).fire-brick input[type="button"]:hover,
-html:not(.cke_editable).fire-brick input[type="reset"]:hover,
-html:not(.cke_editable).fire-brick input[type="submit"]:hover,
-body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:hover,
+/* line 215, ../sass/_groups.scss */
+html.fire-brick .masquerade-switch:hover,
+html.fire-brick .more-link:hover,
+html.fire-brick .btn:hover,
+html.fire-brick button:hover,
+html.fire-brick input[type="button"]:hover,
+html.fire-brick input[type="reset"]:hover,
+html.fire-brick input[type="submit"]:hover, html.fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:hover,
 body:not(.cke_editable).fire-brick .masquerade-switch:hover,
 body:not(.cke_editable).fire-brick .more-link:hover,
 body:not(.cke_editable).fire-brick .btn:hover,
 body:not(.cke_editable).fire-brick button:hover,
 body:not(.cke_editable).fire-brick input[type="button"]:hover,
 body:not(.cke_editable).fire-brick input[type="reset"]:hover,
-body:not(.cke_editable).fire-brick input[type="submit"]:hover {
+body:not(.cke_editable).fire-brick input[type="submit"]:hover,
+body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:hover {
   color: #fff !important;
   background: FireBrick !important;
 }
-/* line 196, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:active,
-html:not(.cke_editable).fire-brick .masquerade-switch:active,
-html:not(.cke_editable).fire-brick .more-link:active,
-html:not(.cke_editable).fire-brick .btn:active,
-html:not(.cke_editable).fire-brick button:active,
-html:not(.cke_editable).fire-brick input[type="button"]:active,
-html:not(.cke_editable).fire-brick input[type="reset"]:active,
-html:not(.cke_editable).fire-brick input[type="submit"]:active,
-body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:active,
+/* line 219, ../sass/_groups.scss */
+html.fire-brick .masquerade-switch:active,
+html.fire-brick .more-link:active,
+html.fire-brick .btn:active,
+html.fire-brick button:active,
+html.fire-brick input[type="button"]:active,
+html.fire-brick input[type="reset"]:active,
+html.fire-brick input[type="submit"]:active, html.fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:active,
 body:not(.cke_editable).fire-brick .masquerade-switch:active,
 body:not(.cke_editable).fire-brick .more-link:active,
 body:not(.cke_editable).fire-brick .btn:active,
 body:not(.cke_editable).fire-brick button:active,
 body:not(.cke_editable).fire-brick input[type="button"]:active,
 body:not(.cke_editable).fire-brick input[type="reset"]:active,
-body:not(.cke_editable).fire-brick input[type="submit"]:active {
+body:not(.cke_editable).fire-brick input[type="submit"]:active,
+body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:active {
   color: #fff !important;
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 202, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick .views-row.community-teaser.products h2,
+/* line 225, ../sass/_groups.scss */
+html.fire-brick .views-row.community-teaser.products h2,
 body:not(.cke_editable).fire-brick .views-row.community-teaser.products h2 {
   color: FireBrick;
   background-color: #f0d3d3;
 }
-/* line 205, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick .views-row.community-teaser.products h2 img,
+/* line 228, ../sass/_groups.scss */
+html.fire-brick .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).fire-brick .views-row.community-teaser.products h2 img {
   border-color: FireBrick !important;
 }
-/* line 209, ../sass/_groups.scss */
-html:not(.cke_editable).fire-brick .tabs-primary__tab a,
+/* line 232, ../sass/_groups.scss */
+html.fire-brick .tabs-primary__tab a,
 body:not(.cke_editable).fire-brick .tabs-primary__tab a {
   color: #fff !important;
 }

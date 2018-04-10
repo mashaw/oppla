@@ -1,149 +1,174 @@
 .theme_group {
-	a#logo.header__logo {
-		width: 150px;
-		margin-bottom: 0
-	}
-	#block-search-form,
-	#block-system-user-menu {
-		clear: none;
-		margin-bottom: 0
-	}
-	#block-search-form {
-		margin-right: 1em
-	}
-	.header__region {
-		margin-bottom: 0
-	}
-	#navigation {
-		margin-top: 0.5em
-	}
-	&.node-type-group {
-		#page {
-			background: $opplaLightGrey;
-			h1.page__title.title {
-				img {
-					vertical-align: middle;
-					margin: 0.5em 1em 0.5em 0;
-				}
-			}
-			.view-mode-full {
-				background: #fff;
-				padding: 0 15px 15px 15px;
-				@include opplaLozenge();
-				.field-name-field-banner-image {
-					@include opplaTopLozenge();
-					margin: 0 -15px 0 -15px;
-				}
-			}
-			
-			.view-og-extras-nodes h2.title {font-size:1.5em;margin-bottom:1em}
-		}
-		.sidebar {
-			.region.sidebar {
-				background: #fff;
-				padding: 5px 15px 5px 15px;
-				margin-bottom: 15px;
-				.block {
-					background: #fff;
-					h3 {
-						color: #6d6e71;
-						font-size: 1.25em;
-						margin: 1em 0 1em 0;
-					}
-				}
-			}
-			.item-list ul {
-				padding-left: 1em;
-				li {
-					@include bullets($opplaBlue);
-				}
-			}
-			.subscribe_link {
-				a {
-					@include btn-white(1.125em)
-				}
-				span.group.manager {
-					font-size: 1.2em
-				}
-			}
-		}
-	}
-	.node-post.node-teaser,
-	.node-group.node-teaser {
-		h2.page__title.title {
-			img {
-				vertical-align: middle;
-				margin: 0.5em 1em 0.5em 0;
-			}
-		}
-		.more-link {
-			font-size: 1em;
-			float: right;
-		}
-	}
-	.view-users-profiles-on-comments .views-field-created,
-	.view-users-on-comments .views-field-created {
-		color: $opplaDarkMidGrey;
-		margin: -1em 0 1em 0;
-		.views-label {
-			color: $opplaDarkMidGrey;
-			font-family: 'lato-regular', sans-serif;
-		}
-	}
-	.group-members .views-row.community-teaser.products {
-		padding: 0.5em 0;
-		h2 {
-			font-size: 16px;
-			line-height: 2;
-			//height: 50px;
-			vertical-align: middle;
-			padding: 0.5em 0.5em;
-			margin: 0;
-			img {
-				display: block;
-				vertical-align: middle;
-				position: relative;
-				top: auto;
-				right: auto;
-				float: left;
-				width: 60px;
-				height: 60px;
-				margin: -1.15em 5px -1.15em 0;
-			}
-		}
-	}
-	.views-field-field-file-upload-multi .file-icon {
-		display: none
-	}
-	.node-type-group .sidebar .views-field-field-file-upload-multi .item-list ul {
-		padding-left: 0;
-		li:before {
-			position: relative;
-			left: auto;
-			@include icon-font2('\e800');
-			margin-right: 0em;
-			fomt-size: 2em;
-		}
-	}
-	.field-name-og-group-ref {margin: 1em 0;
-		.field-label {padding: 0.15em 0;
-			font-size: 1.125em;
-			margin: 0 1em 0 0
-		}
-		.field-item {
-			display: inline-block;
-			margin-right: 1em;
-			a {
-				@include btn-white(1em)
-			}
-		}
-	}
+    a#logo.header__logo {
+        width: 150px;
+        margin-bottom: 0
+    }
+    #block-search-form,
+    #block-system-user-menu {
+        clear: none;
+        margin-bottom: 0
+    }
+    #block-search-form {
+        margin-right: 1em
+    }
+    .header__region {
+        margin-bottom: 0
+    }
+    #navigation {
+        margin-top: 0.5em
+    }
+    
+     &.node-type-post    #content.column  {
+                background: #fff;
+         h1.page__title {padding: 12px  12px  0 12px }
+            }
+    
+    
+    ul.tabs-primary {margin: 0 12px  12px  12px }
+     &.node-type-post ,
+    &.node-type-group {
+        #page {
+            
+        
+            
+            .block-quicktabs {
+                border: 12px solid #fff;
+            }
+            .view-og-extras-nodes  {
+                border-top: 3px $opplaLightGrey solid;
+                background: #fff;
+                h2.title {
+                    font-size: 1.5em;
+                    margin-bottom: 1em
+                }
+                .node-teaser h2 {
+                    font-size: 1.25em;
+                    margin: 1em 0 0.5em 0;
+                }
+            }
+            background: $opplaLightGrey;
+            h1.page__title.title {
+                img {
+                    vertical-align: middle;
+                    margin: 0.5em 1em 0.5em 0;
+                }
+            }
+            .view-mode-full {
+                background: #fff;
+                padding: 0 15px 15px 15px;
+                @include opplaLozenge();
+                .field-name-field-banner-image {
+                    @include opplaTopLozenge();
+                    margin: 0 -15px 0 -15px;
+                }
+            }
+
+        }
+        .sidebar {
+            .region.sidebar {
+                background: #fff;
+                padding: 5px 15px 5px 15px;
+                margin-bottom: 15px;
+                .block {
+                    background: #fff;
+                    h3 {
+                        color: #6d6e71;
+                        font-size: 1.25em;
+                        margin: 1em 0 1em 0;
+                    }
+                }
+            }
+            .item-list ul {
+                padding-left: 1em;
+                li {
+                    @include bullets($opplaBlue);
+                }
+            }
+            .subscribe_link {
+                a {
+                    @include btn-white(1.125em)
+                }
+                span.group.manager {
+                    font-size: 1.2em
+                }
+            }
+        }
+    }
+    .node-post.node-teaser,
+    .node-group.node-teaser {
+        h2.page__title.title {
+            img {
+                vertical-align: middle;
+                margin: 0.5em 1em 0.5em 0;
+            }
+        }
+        .more-link {
+            font-size: 1em;
+            float: right;
+        }
+    }
+    .view-users-profiles-on-comments .views-field-created,
+    .view-users-on-comments .views-field-created {
+        color: $opplaDarkMidGrey;
+        margin: -1em 0 1em 0;
+        .views-label {
+            color: $opplaDarkMidGrey;
+            font-family: 'lato-regular', sans-serif;
+        }
+    }
+    .group-members .views-row.community-teaser.products {
+        padding: 0.5em 0;
+        h2 {
+            font-size: 16px;
+            line-height: 2;
+            //height: 50px;
+            vertical-align: middle;
+            padding: 0.5em 0.5em;
+            margin: 0;
+            img {
+                display: block;
+                vertical-align: middle;
+                position: relative;
+                top: auto;
+                right: auto;
+                float: left;
+                width: 60px;
+                height: 60px;
+                margin: -1.15em 5px -1.15em 0;
+            }
+        }
+    }
+    .views-field-field-file-upload-multi .file-icon {
+        display: none
+    }
+    .node-type-group .sidebar .views-field-field-file-upload-multi .item-list ul {
+        padding-left: 0;
+        li:before {
+            position: relative;
+            left: auto;
+            @include icon-font2('\e800');
+            margin-right: 0em;
+            fomt-size: 2em;
+        }
+    }
+    .field-name-og-group-ref {
+        margin: 1em 0;
+        .field-label {
+            padding: 0.15em 0;
+            font-size: 1.125em;
+            margin: 0 1em 0 0
+        }
+        .field-item {
+            display: inline-block;
+            margin-right: 1em;
+            a {
+                @include btn-white(1em)
+            }
+        }
+    }
 }
 
-//$opplaGrpPlum:Plum ;
-//$opplaGrpOrange:Orange ;
-//$opplaGrpBlue: DodgerBlue;
-//$opplaGrpRed: FireBrick; 
+
 @mixin groupText($groupColour) {
     background-color: tint($groupColour, 90%);
     .ok,
@@ -155,41 +180,39 @@
     h3,
     dt,
     .field .field-label,
-    legend ,
-    
-    .theme_group.node-type-group .sidebar .item-list ul li:before  {
+    legend,
+    &.theme_group.node-type-group .sidebar .item-list ul li:before {
         color: $groupColour!important;
     }
      :not(.tabs-primary) a:link,
      :not(.tabs-primary) a:visited {
         color: $groupColour;
     }
+    
+    .block-quicktabs ul.quicktabs-tabs li.active a  {
+        color: $groupColour!important;
+        border-color: $groupColour!important;
+   }
     .masquerade-switch,
     .more-link,
     .btn,
     button,
-    
-    
-   input[type="button"],
+    input[type="button"],
     input[type="reset"],
     input[type="submit"],
-    
-    
-    
-    .block-quicktabs ul.quicktabs-tabs li.active a,
     &.theme_group.node-type-group .sidebar .subscribe_link a {
         color: $groupColour!important;
         border-color: $groupColour!important;
-    }
-    &.theme_group.node-type-group .sidebar .subscribe_link a,
-    .masquerade-switch,
-    .more-link,
-    .btn,
-    button ,
-       input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-        &:hover {
+   // }
+//    &.theme_group.node-type-group .sidebar .subscribe_link a,
+//    .masquerade-switch,
+//    .more-link,
+//    .btn,
+//    button,
+//    input[type="button"],
+//    input[type="reset"],
+//    input[type="submit"] {
+       &:hover {
             color: #fff!important;
             background: $groupColour!important;
         }
@@ -211,21 +234,25 @@
     }
     //--Close--    
 }
+
+
+//$opplaGrpPlum:Plum ;
+//$opplaGrpOrange:Orange ;
+//$opplaGrpBlue: DodgerBlue;
+//$opplaGrpRed: FireBrick; 
+
 html,
-body {
-    &:not(.cke_editable) {
-        &.orange    {
+body:not(.cke_editable) {
+        &.orange {
             @include groupText($opplaGrpOrange);
         }
         &.plum {
-             @include groupText($opplaGrpPlum);
+            @include groupText($opplaGrpPlum);
         }
-        &.dodger-blue   {
-             @include groupText($opplaGrpBlue);
+        &.dodger-blue {
+            @include groupText($opplaGrpBlue);
         }
-        &.fire-brick  {
-             @include groupText($opplaGrpRed);
+        &.fire-brick {
+            @include groupText($opplaGrpRed);
         }
     }
-}
-
