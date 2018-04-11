@@ -78,7 +78,7 @@
                     }
                 }
             }
-            .item-list ul {
+            .item-list ul:not(.pager) {
                 padding-left: 1em;
                 li {
                     @include bullets($opplaBlue);
@@ -197,6 +197,7 @@
     .more-link,
     .btn,
     button,
+    .group.subscribe ,
     input[type="button"],
     input[type="reset"],
     input[type="submit"],

@@ -8052,18 +8052,18 @@ a.clickable-terms:active {
   margin: 1em 0 1em 0;
 }
 /* line 81, ../sass/_groups.scss */
-.theme_group.node-type-post .sidebar .item-list ul, .theme_group.node-type-group .sidebar .item-list ul {
+.theme_group.node-type-post .sidebar .item-list ul:not(.pager), .theme_group.node-type-group .sidebar .item-list ul:not(.pager) {
   padding-left: 1em;
 }
 /* line 83, ../sass/_groups.scss */
-.theme_group.node-type-post .sidebar .item-list ul li, .theme_group.node-type-group .sidebar .item-list ul li {
+.theme_group.node-type-post .sidebar .item-list ul:not(.pager) li, .theme_group.node-type-group .sidebar .item-list ul:not(.pager) li {
   position: relative;
   margin-bottom: 3px;
   list-style: none;
   padding: 0;
 }
 /* line 302, ../sass/_mixins.scss */
-.theme_group.node-type-post .sidebar .item-list ul li:before, .theme_group.node-type-group .sidebar .item-list ul li:before {
+.theme_group.node-type-post .sidebar .item-list ul:not(.pager) li:before, .theme_group.node-type-group .sidebar .item-list ul:not(.pager) li:before {
   position: absolute;
   content: " \2022";
   color: #00aaad;
@@ -8250,7 +8250,7 @@ a.clickable-terms:active {
   cursor: pointer;
 }
 
-/* line 246, ../sass/_groups.scss */
+/* line 247, ../sass/_groups.scss */
 html.orange,
 body:not(.cke_editable).orange {
   background-color: #fff6e6;
@@ -8296,6 +8296,7 @@ html.orange .masquerade-switch,
 html.orange .more-link,
 html.orange .btn,
 html.orange button,
+html.orange .group.subscribe,
 html.orange input[type="button"],
 html.orange input[type="reset"],
 html.orange input[type="submit"], html.orange.theme_group.node-type-group .sidebar .subscribe_link a,
@@ -8303,6 +8304,7 @@ body:not(.cke_editable).orange .masquerade-switch,
 body:not(.cke_editable).orange .more-link,
 body:not(.cke_editable).orange .btn,
 body:not(.cke_editable).orange button,
+body:not(.cke_editable).orange .group.subscribe,
 body:not(.cke_editable).orange input[type="button"],
 body:not(.cke_editable).orange input[type="reset"],
 body:not(.cke_editable).orange input[type="submit"],
@@ -8310,11 +8312,12 @@ body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_l
   color: Orange !important;
   border-color: Orange !important;
 }
-/* line 215, ../sass/_groups.scss */
+/* line 216, ../sass/_groups.scss */
 html.orange .masquerade-switch:hover,
 html.orange .more-link:hover,
 html.orange .btn:hover,
 html.orange button:hover,
+html.orange .group.subscribe:hover,
 html.orange input[type="button"]:hover,
 html.orange input[type="reset"]:hover,
 html.orange input[type="submit"]:hover, html.orange.theme_group.node-type-group .sidebar .subscribe_link a:hover,
@@ -8322,6 +8325,7 @@ body:not(.cke_editable).orange .masquerade-switch:hover,
 body:not(.cke_editable).orange .more-link:hover,
 body:not(.cke_editable).orange .btn:hover,
 body:not(.cke_editable).orange button:hover,
+body:not(.cke_editable).orange .group.subscribe:hover,
 body:not(.cke_editable).orange input[type="button"]:hover,
 body:not(.cke_editable).orange input[type="reset"]:hover,
 body:not(.cke_editable).orange input[type="submit"]:hover,
@@ -8329,11 +8333,12 @@ body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_l
   color: #fff !important;
   background: Orange !important;
 }
-/* line 219, ../sass/_groups.scss */
+/* line 220, ../sass/_groups.scss */
 html.orange .masquerade-switch:active,
 html.orange .more-link:active,
 html.orange .btn:active,
 html.orange button:active,
+html.orange .group.subscribe:active,
 html.orange input[type="button"]:active,
 html.orange input[type="reset"]:active,
 html.orange input[type="submit"]:active, html.orange.theme_group.node-type-group .sidebar .subscribe_link a:active,
@@ -8341,6 +8346,7 @@ body:not(.cke_editable).orange .masquerade-switch:active,
 body:not(.cke_editable).orange .more-link:active,
 body:not(.cke_editable).orange .btn:active,
 body:not(.cke_editable).orange button:active,
+body:not(.cke_editable).orange .group.subscribe:active,
 body:not(.cke_editable).orange input[type="button"]:active,
 body:not(.cke_editable).orange input[type="reset"]:active,
 body:not(.cke_editable).orange input[type="submit"]:active,
@@ -8349,23 +8355,23 @@ body:not(.cke_editable).orange.theme_group.node-type-group .sidebar .subscribe_l
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 225, ../sass/_groups.scss */
+/* line 226, ../sass/_groups.scss */
 html.orange .views-row.community-teaser.products h2,
 body:not(.cke_editable).orange .views-row.community-teaser.products h2 {
   color: Orange;
   background-color: #ffedcc;
 }
-/* line 228, ../sass/_groups.scss */
+/* line 229, ../sass/_groups.scss */
 html.orange .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).orange .views-row.community-teaser.products h2 img {
   border-color: Orange !important;
 }
-/* line 232, ../sass/_groups.scss */
+/* line 233, ../sass/_groups.scss */
 html.orange .tabs-primary__tab a,
 body:not(.cke_editable).orange .tabs-primary__tab a {
   color: #fff !important;
 }
-/* line 249, ../sass/_groups.scss */
+/* line 250, ../sass/_groups.scss */
 html.plum,
 body:not(.cke_editable).plum {
   background-color: #fcf6fc;
@@ -8411,6 +8417,7 @@ html.plum .masquerade-switch,
 html.plum .more-link,
 html.plum .btn,
 html.plum button,
+html.plum .group.subscribe,
 html.plum input[type="button"],
 html.plum input[type="reset"],
 html.plum input[type="submit"], html.plum.theme_group.node-type-group .sidebar .subscribe_link a,
@@ -8418,6 +8425,7 @@ body:not(.cke_editable).plum .masquerade-switch,
 body:not(.cke_editable).plum .more-link,
 body:not(.cke_editable).plum .btn,
 body:not(.cke_editable).plum button,
+body:not(.cke_editable).plum .group.subscribe,
 body:not(.cke_editable).plum input[type="button"],
 body:not(.cke_editable).plum input[type="reset"],
 body:not(.cke_editable).plum input[type="submit"],
@@ -8425,11 +8433,12 @@ body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_lin
   color: Plum !important;
   border-color: Plum !important;
 }
-/* line 215, ../sass/_groups.scss */
+/* line 216, ../sass/_groups.scss */
 html.plum .masquerade-switch:hover,
 html.plum .more-link:hover,
 html.plum .btn:hover,
 html.plum button:hover,
+html.plum .group.subscribe:hover,
 html.plum input[type="button"]:hover,
 html.plum input[type="reset"]:hover,
 html.plum input[type="submit"]:hover, html.plum.theme_group.node-type-group .sidebar .subscribe_link a:hover,
@@ -8437,6 +8446,7 @@ body:not(.cke_editable).plum .masquerade-switch:hover,
 body:not(.cke_editable).plum .more-link:hover,
 body:not(.cke_editable).plum .btn:hover,
 body:not(.cke_editable).plum button:hover,
+body:not(.cke_editable).plum .group.subscribe:hover,
 body:not(.cke_editable).plum input[type="button"]:hover,
 body:not(.cke_editable).plum input[type="reset"]:hover,
 body:not(.cke_editable).plum input[type="submit"]:hover,
@@ -8444,11 +8454,12 @@ body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_lin
   color: #fff !important;
   background: Plum !important;
 }
-/* line 219, ../sass/_groups.scss */
+/* line 220, ../sass/_groups.scss */
 html.plum .masquerade-switch:active,
 html.plum .more-link:active,
 html.plum .btn:active,
 html.plum button:active,
+html.plum .group.subscribe:active,
 html.plum input[type="button"]:active,
 html.plum input[type="reset"]:active,
 html.plum input[type="submit"]:active, html.plum.theme_group.node-type-group .sidebar .subscribe_link a:active,
@@ -8456,6 +8467,7 @@ body:not(.cke_editable).plum .masquerade-switch:active,
 body:not(.cke_editable).plum .more-link:active,
 body:not(.cke_editable).plum .btn:active,
 body:not(.cke_editable).plum button:active,
+body:not(.cke_editable).plum .group.subscribe:active,
 body:not(.cke_editable).plum input[type="button"]:active,
 body:not(.cke_editable).plum input[type="reset"]:active,
 body:not(.cke_editable).plum input[type="submit"]:active,
@@ -8464,23 +8476,23 @@ body:not(.cke_editable).plum.theme_group.node-type-group .sidebar .subscribe_lin
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 225, ../sass/_groups.scss */
+/* line 226, ../sass/_groups.scss */
 html.plum .views-row.community-teaser.products h2,
 body:not(.cke_editable).plum .views-row.community-teaser.products h2 {
   color: Plum;
   background-color: #f8ecf8;
 }
-/* line 228, ../sass/_groups.scss */
+/* line 229, ../sass/_groups.scss */
 html.plum .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).plum .views-row.community-teaser.products h2 img {
   border-color: Plum !important;
 }
-/* line 232, ../sass/_groups.scss */
+/* line 233, ../sass/_groups.scss */
 html.plum .tabs-primary__tab a,
 body:not(.cke_editable).plum .tabs-primary__tab a {
   color: #fff !important;
 }
-/* line 252, ../sass/_groups.scss */
+/* line 253, ../sass/_groups.scss */
 html.dodger-blue,
 body:not(.cke_editable).dodger-blue {
   background-color: #e9f4ff;
@@ -8526,6 +8538,7 @@ html.dodger-blue .masquerade-switch,
 html.dodger-blue .more-link,
 html.dodger-blue .btn,
 html.dodger-blue button,
+html.dodger-blue .group.subscribe,
 html.dodger-blue input[type="button"],
 html.dodger-blue input[type="reset"],
 html.dodger-blue input[type="submit"], html.dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a,
@@ -8533,6 +8546,7 @@ body:not(.cke_editable).dodger-blue .masquerade-switch,
 body:not(.cke_editable).dodger-blue .more-link,
 body:not(.cke_editable).dodger-blue .btn,
 body:not(.cke_editable).dodger-blue button,
+body:not(.cke_editable).dodger-blue .group.subscribe,
 body:not(.cke_editable).dodger-blue input[type="button"],
 body:not(.cke_editable).dodger-blue input[type="reset"],
 body:not(.cke_editable).dodger-blue input[type="submit"],
@@ -8540,11 +8554,12 @@ body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscr
   color: DodgerBlue !important;
   border-color: DodgerBlue !important;
 }
-/* line 215, ../sass/_groups.scss */
+/* line 216, ../sass/_groups.scss */
 html.dodger-blue .masquerade-switch:hover,
 html.dodger-blue .more-link:hover,
 html.dodger-blue .btn:hover,
 html.dodger-blue button:hover,
+html.dodger-blue .group.subscribe:hover,
 html.dodger-blue input[type="button"]:hover,
 html.dodger-blue input[type="reset"]:hover,
 html.dodger-blue input[type="submit"]:hover, html.dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:hover,
@@ -8552,6 +8567,7 @@ body:not(.cke_editable).dodger-blue .masquerade-switch:hover,
 body:not(.cke_editable).dodger-blue .more-link:hover,
 body:not(.cke_editable).dodger-blue .btn:hover,
 body:not(.cke_editable).dodger-blue button:hover,
+body:not(.cke_editable).dodger-blue .group.subscribe:hover,
 body:not(.cke_editable).dodger-blue input[type="button"]:hover,
 body:not(.cke_editable).dodger-blue input[type="reset"]:hover,
 body:not(.cke_editable).dodger-blue input[type="submit"]:hover,
@@ -8559,11 +8575,12 @@ body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscr
   color: #fff !important;
   background: DodgerBlue !important;
 }
-/* line 219, ../sass/_groups.scss */
+/* line 220, ../sass/_groups.scss */
 html.dodger-blue .masquerade-switch:active,
 html.dodger-blue .more-link:active,
 html.dodger-blue .btn:active,
 html.dodger-blue button:active,
+html.dodger-blue .group.subscribe:active,
 html.dodger-blue input[type="button"]:active,
 html.dodger-blue input[type="reset"]:active,
 html.dodger-blue input[type="submit"]:active, html.dodger-blue.theme_group.node-type-group .sidebar .subscribe_link a:active,
@@ -8571,6 +8588,7 @@ body:not(.cke_editable).dodger-blue .masquerade-switch:active,
 body:not(.cke_editable).dodger-blue .more-link:active,
 body:not(.cke_editable).dodger-blue .btn:active,
 body:not(.cke_editable).dodger-blue button:active,
+body:not(.cke_editable).dodger-blue .group.subscribe:active,
 body:not(.cke_editable).dodger-blue input[type="button"]:active,
 body:not(.cke_editable).dodger-blue input[type="reset"]:active,
 body:not(.cke_editable).dodger-blue input[type="submit"]:active,
@@ -8579,23 +8597,23 @@ body:not(.cke_editable).dodger-blue.theme_group.node-type-group .sidebar .subscr
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 225, ../sass/_groups.scss */
+/* line 226, ../sass/_groups.scss */
 html.dodger-blue .views-row.community-teaser.products h2,
 body:not(.cke_editable).dodger-blue .views-row.community-teaser.products h2 {
   color: DodgerBlue;
   background-color: #d2e9ff;
 }
-/* line 228, ../sass/_groups.scss */
+/* line 229, ../sass/_groups.scss */
 html.dodger-blue .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).dodger-blue .views-row.community-teaser.products h2 img {
   border-color: DodgerBlue !important;
 }
-/* line 232, ../sass/_groups.scss */
+/* line 233, ../sass/_groups.scss */
 html.dodger-blue .tabs-primary__tab a,
 body:not(.cke_editable).dodger-blue .tabs-primary__tab a {
   color: #fff !important;
 }
-/* line 255, ../sass/_groups.scss */
+/* line 256, ../sass/_groups.scss */
 html.fire-brick,
 body:not(.cke_editable).fire-brick {
   background-color: #f7e9e9;
@@ -8641,6 +8659,7 @@ html.fire-brick .masquerade-switch,
 html.fire-brick .more-link,
 html.fire-brick .btn,
 html.fire-brick button,
+html.fire-brick .group.subscribe,
 html.fire-brick input[type="button"],
 html.fire-brick input[type="reset"],
 html.fire-brick input[type="submit"], html.fire-brick.theme_group.node-type-group .sidebar .subscribe_link a,
@@ -8648,6 +8667,7 @@ body:not(.cke_editable).fire-brick .masquerade-switch,
 body:not(.cke_editable).fire-brick .more-link,
 body:not(.cke_editable).fire-brick .btn,
 body:not(.cke_editable).fire-brick button,
+body:not(.cke_editable).fire-brick .group.subscribe,
 body:not(.cke_editable).fire-brick input[type="button"],
 body:not(.cke_editable).fire-brick input[type="reset"],
 body:not(.cke_editable).fire-brick input[type="submit"],
@@ -8655,11 +8675,12 @@ body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscri
   color: FireBrick !important;
   border-color: FireBrick !important;
 }
-/* line 215, ../sass/_groups.scss */
+/* line 216, ../sass/_groups.scss */
 html.fire-brick .masquerade-switch:hover,
 html.fire-brick .more-link:hover,
 html.fire-brick .btn:hover,
 html.fire-brick button:hover,
+html.fire-brick .group.subscribe:hover,
 html.fire-brick input[type="button"]:hover,
 html.fire-brick input[type="reset"]:hover,
 html.fire-brick input[type="submit"]:hover, html.fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:hover,
@@ -8667,6 +8688,7 @@ body:not(.cke_editable).fire-brick .masquerade-switch:hover,
 body:not(.cke_editable).fire-brick .more-link:hover,
 body:not(.cke_editable).fire-brick .btn:hover,
 body:not(.cke_editable).fire-brick button:hover,
+body:not(.cke_editable).fire-brick .group.subscribe:hover,
 body:not(.cke_editable).fire-brick input[type="button"]:hover,
 body:not(.cke_editable).fire-brick input[type="reset"]:hover,
 body:not(.cke_editable).fire-brick input[type="submit"]:hover,
@@ -8674,11 +8696,12 @@ body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscri
   color: #fff !important;
   background: FireBrick !important;
 }
-/* line 219, ../sass/_groups.scss */
+/* line 220, ../sass/_groups.scss */
 html.fire-brick .masquerade-switch:active,
 html.fire-brick .more-link:active,
 html.fire-brick .btn:active,
 html.fire-brick button:active,
+html.fire-brick .group.subscribe:active,
 html.fire-brick input[type="button"]:active,
 html.fire-brick input[type="reset"]:active,
 html.fire-brick input[type="submit"]:active, html.fire-brick.theme_group.node-type-group .sidebar .subscribe_link a:active,
@@ -8686,6 +8709,7 @@ body:not(.cke_editable).fire-brick .masquerade-switch:active,
 body:not(.cke_editable).fire-brick .more-link:active,
 body:not(.cke_editable).fire-brick .btn:active,
 body:not(.cke_editable).fire-brick button:active,
+body:not(.cke_editable).fire-brick .group.subscribe:active,
 body:not(.cke_editable).fire-brick input[type="button"]:active,
 body:not(.cke_editable).fire-brick input[type="reset"]:active,
 body:not(.cke_editable).fire-brick input[type="submit"]:active,
@@ -8694,18 +8718,18 @@ body:not(.cke_editable).fire-brick.theme_group.node-type-group .sidebar .subscri
   background: #242424 !important;
   border-color: #242424 !important;
 }
-/* line 225, ../sass/_groups.scss */
+/* line 226, ../sass/_groups.scss */
 html.fire-brick .views-row.community-teaser.products h2,
 body:not(.cke_editable).fire-brick .views-row.community-teaser.products h2 {
   color: FireBrick;
   background-color: #f0d3d3;
 }
-/* line 228, ../sass/_groups.scss */
+/* line 229, ../sass/_groups.scss */
 html.fire-brick .views-row.community-teaser.products h2 img,
 body:not(.cke_editable).fire-brick .views-row.community-teaser.products h2 img {
   border-color: FireBrick !important;
 }
-/* line 232, ../sass/_groups.scss */
+/* line 233, ../sass/_groups.scss */
 html.fire-brick .tabs-primary__tab a,
 body:not(.cke_editable).fire-brick .tabs-primary__tab a {
   color: #fff !important;
