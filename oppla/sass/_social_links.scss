@@ -1,4 +1,4 @@
-
+.block.social-links ,
 #block-menu-menu-social-links,
 #block-menu-block-4 {
 	margin: 0 1em 0 0;
@@ -42,6 +42,9 @@
 		}
 		li a.youtube:after {
 			@include icon-font('\e810');
+		}
+        li a.flickr:after {
+            @include icon-font('\e806');
 		}
 		li a:after {
 			font-size: 20px!important;

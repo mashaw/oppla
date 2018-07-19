@@ -204,7 +204,8 @@
 		display: block;
 		margin: 10px 0 10px 0;
 		//height: 10px;
-		background: $opplaLightGrey;
+		//background: $opplaLightGrey;
+        		background: transparent;
 		color: $opplaLightGrey;
 		border: none;
 		@include divider(bottom);

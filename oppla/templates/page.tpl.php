@@ -55,10 +55,22 @@
       </aside>
     <?php endif; ?>
 
+
+          <?php if (($is_front) && ($messages)): ?>
+<?php print $messages; ?>
+
+
+  <?php endif; ?>
+
+
+
       <div id="content" class="column" role="main">
 
-<?php if ($messages): ?>
+
+      <?php if ((!$is_front) && ($messages)): ?>
 <?php print $messages; ?>
+
+
   <?php endif; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>

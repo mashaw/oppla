@@ -5,6 +5,8 @@
  * When you turn on CSS aggregation at admin/config/development/performance, all
  * of these @include files will be combined into a single file.
  */
+
+
 /* Import Sass mixins, variables, Compass modules, etc. */
 
 @import "init";
@@ -20,14 +22,18 @@
 /* Component (SMACSS module) rules */
 
 @import "components/misc";
-
 // Optionally, add your own components here.
-
 @import "print";
 
 /* SMACSS theme rules */
+
+
 /* @import "theme-A"; */
+
+
 /* @import "theme-B"; */
+
+
 /*/Brand colours
 		Teal colour #009ba4
 		Teal tint colour #d5ecef
@@ -39,13 +45,11 @@
 /* === NAVIGATION === */
 
 @import "navigation";
-
 @import "flippy";
 
 /* === TYPESETTING === */
 
 @import "fonts";
-
 html,
 body {
     color: $opplaDarkGrey;
@@ -55,10 +59,8 @@ body {
     @include lato55;
     padding: 0;
     margin: 0;
-    &:not(.cke_editable) {
-    }
+    &:not(.cke_editable) {}
 }
-
 
 h1,
 h2,
@@ -98,7 +100,7 @@ li {
     margin: 0 0 0.5em;
 }
 
-th ,
+th,
 h4,
 b,
 strong {
@@ -159,30 +161,41 @@ a[href^="mailto:"]:after {
     content: "\e800";
 }
 
-table {border-top: 3px solid $opplaMidGrey;
+table {
+    border-top: 3px solid $opplaMidGrey;
     tr {
-        td, th {text-align:left;
-        	line-height:1.2;
-        	padding:0.25em 0.25em 0.25em 0.5em;
-        	border-bottom: 3px solid $opplaMidGrey;
-        	background:$opplaMidGrey;
-        	p  , li	{margin:0 0 2px 0;line-height:1.2;}
+        td,
+        th {
+            text-align: left;
+            line-height: 1.2;
+            padding: 0.25em 0.25em 0.25em 0.5em;
+            border-bottom: 3px solid $opplaMidGrey;
+            background: $opplaMidGrey;
+            p,
+            li {
+                margin: 0 0 2px 0;
+                line-height: 1.2;
+            }
+            ul {
+                margin: 0;
+                &:not(.quicktabs-tabs):not(.tabs-primary):not(.tabs-primary) {
+                    margin: 0;
+                    li:last-child {
+                        margin: 0 0 2px 0;
+                    }
+                }
+            }
+            th {}
+            td {
+                border-bottom: 1px solid $opplaMidGrey;
+                background: $opplaLightGrey;
+            }
+            &:nth-child(even) td {
+                background: $opplaLightestGrey;
+            }
         }
-        th {}
-        td {border-bottom: 1px solid $opplaMidGrey;
-        	background:$opplaLightGrey;
-        }
-
-        &:nth-child(even) td {background:$opplaLightestGrey;}
     }
 }
-
-
-
-
-
-
-
 hr {
     color: $opplaMidGrey;
     height: 2px;
@@ -243,6 +256,7 @@ ul.nolist li {
     }
 }
 
+
 /* === HEADER === */
 
 .header_wrapper {
@@ -278,6 +292,7 @@ a#logo.header__logo {
 
 @media all and (max-width: 600px) {}
 
+
 /* ---- Search box ---- */
 
 #block-search-form * {
@@ -308,14 +323,15 @@ a#logo.header__logo {
     }
 }
 
+
 /* ---- Social links ---- */
 
 @import "social_links";
-
 #block-menu-menu-social-links {
     float: right;
     margin-right: 1em;
 }
+
 
 /* === USER MENU === */
 
@@ -350,7 +366,6 @@ a#logo.header__logo {
                 //				padding: 0.2em 0.2em;
                 //				border: 0.2em solid $opplaGold;
                 //				@include opplaLozenge();
-           
             }
         }
         .logout:after {
@@ -372,6 +387,7 @@ a#logo.header__logo {
 }
 
 @media all and (max-width: 768px) {}
+
 
 /* ---- Header responsive ---- */
 
@@ -461,10 +477,10 @@ a#logo.header__logo {
     }
 }
 
+
 /* ---- FRONT PAGE ---- */
 
 //@import "flexslider";
-
 .front #content.column {
     background: $opplaBlue;
     overflow: auto;
@@ -609,6 +625,7 @@ a#logo.header__logo {
     //.videoWrapper { max-width:615px;}
 }
 
+
 /* ---- HIGHLIGHTED BLOCKS ---- */
 
 @import "highlighted";
@@ -702,6 +719,7 @@ a#logo.header__logo {
     }
 }
 
+
 /* === TWITTER === */
 
 #block-twitter-block-1 .block-content {}
@@ -711,8 +729,10 @@ a#logo.header__logo {
     max-width: 100% !important;
 }
 
+
 /* === NEWS / EVENTS BLOCKS === */
 
+.block.escom-events,
 #block-views-news-articles-block,
 #block-views-events-block {
     .block-content {
@@ -760,6 +780,7 @@ a#logo.header__logo {
         padding: 0 0 0 15px;
     }
 }
+
 
 /* === NEWS / EVENTS NODES === */
 
@@ -813,6 +834,7 @@ a#logo.header__logo {
     margin: 1em 0;
 }
 
+
 /* === ASK NODE === */
 
 .field-type-taxonomy-term-reference.field-label-above .field-item {
@@ -838,12 +860,13 @@ a#logo.header__logo {
     }
 }
 
-/* === SIDEBAR (commen) === */
+
+/* === SIDEBAR (common) === */
 
 .region-sidebar-second .block-views {
     font-size: 85%;
     line-height: 1.3;
-    ul {
+    ul:not(.pager) {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -853,6 +876,7 @@ a#logo.header__logo {
         }
     }
 }
+
 
 /* === CONTENT === */
 
@@ -887,6 +911,7 @@ a#logo.header__logo {
     }
 }
 
+
 /* === Case study (old) === */
 
 table.case-study {
@@ -910,13 +935,17 @@ table.case-study {
 }
 
 .case-studies {
+    display: block;
     margin-right: -1.5%;
     width: 101.5%;
-    li {
+    li {padding-bottom: 1em!important;
+        //border: 1px solid purple;
         text-align: center;
         width: 31.5%;
         margin-right: 1.5% !important;
-        display: inline-block;
+        display: block;
+        float: left;
+        
         img {
             width: 100%;
         }
@@ -930,14 +959,32 @@ table.case-study {
             &:hover {
                 background: $opplaMidGrey;
             }
+           
         }
+         &:nth-child(3n+1) {
+                clear: left;
+            }
     }
-    @media all and (max-width: 500px) {
+    @media all and (max-width: 768px) {
         li {
-            width: 98.5%;
+            width: 48.5%;
             a {
                 margin-bottom: 1em;
             }
+            &:nth-child(3n+1) {
+                clear: none;
+            }
+            &:nth-child(odd) {
+                clear: left;
+            }
+        }
+    }
+    @media all and (max-width: 400px) {
+        li {
+            width: 98.5%;
+            margin-right: 1.5% !important;
+            padding-bottom: 0!important;
+            float: none;clear:both
         }
     }
 }
@@ -948,7 +995,7 @@ table.case-study {
 
 /* === QUESTION VIEW === */
 
-.views-exposed-widget {
+.sidebar .views-exposed-widget {
     /* --- Exposed filters --- */
     position: relative;
     clear: both;
@@ -1032,6 +1079,7 @@ table.case-study {
     }
 }
 
+
 /* === QUESTION NODE === */
 
 .node-oppla-question {
@@ -1054,6 +1102,7 @@ table.case-study {
         }
     }
 }
+
 
 /* === QUESTION COMMENTS === */
 
@@ -1133,7 +1182,8 @@ mark.new {
 .comment-id {
     float: right;
     text-align: right;
-    &:link, &:visited {
+    &:link,
+    &:visited {
         color: $opplaDarkMidGrey;
         text-decoration: none;
     }
@@ -1221,6 +1271,7 @@ mark.new {
     }
 }
 
+
 /* === FOOTER === */
 
 #footer {
@@ -1229,8 +1280,8 @@ mark.new {
     margin: 0 -20px;
 }
 
-#block-menu-block-2 ul,
-#block-menu-block-2 li {
+.block.footer-menu ul,
+.block.footer-menu li {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1252,7 +1303,10 @@ mark.new {
     }
 }
 
+
 /* --- Footer Menu block --- */
+
+
 /* --- EU block --- */
 
 #block-block-3 {
@@ -1276,6 +1330,7 @@ mark.new {
     width: auto;
 }
 
+
 /* --- copyright block --- */
 
 #block-block-4 {
@@ -1292,7 +1347,7 @@ mark.new {
 }
 
 @media all and (max-width: 768px) {
-    #block-menu-block-2 ul.menu li {
+    .block.footer-menu ul.menu li {
         width: 31.5%;
         a {
             display: block;
@@ -1306,7 +1361,7 @@ mark.new {
 }
 
 @media all and (max-width: 625px) {
-    #block-menu-block-2 ul.menu li {
+    .block.footer-menu ul.menu li {
         width: 48.5%;
         a {
             display: block;
@@ -1331,7 +1386,7 @@ mark.new {
 }
 
 @media all and (max-width: 500px) {
-    #block-menu-block-2 ul.menu li {
+    .block.footer-menu ul.menu li {
         width: 98.5%;
         a {
             display: block;
@@ -1358,7 +1413,6 @@ mark.new {
 //		display: block;
 //	}
 //}
-
 .description h4 {
     @include headBold;
     font-weight: normal;
@@ -1393,7 +1447,6 @@ mark.new {
 }
 
 // === WEBFORM === //
-
 .btn.product {
     font-size: 1.15em;
     line-height: 1.5;
@@ -1411,7 +1464,6 @@ mark.new {
 }
 
 // --- Progress bar --- //
-
 .webform-progressbar-outer {
     border-color: $opplaBlue;
 }
@@ -1431,7 +1483,6 @@ input.form-submit.ajax-processed {
 }
 
 // --- Results --- //
-
 table.views-table {
     width: 100%;
     border-top: 2px solid $opplaBlue;
@@ -1482,7 +1533,7 @@ table.views-table {
 }
 
 .block.search .views-exposed-widgets,
-body:not(.page-case-study-finder) .block.block-views .views-exposed-widgets {
+body:not(.page-case-study-finder):not(.page-case-studies):not(.escom) .block.block-views .views-exposed-widgets {
     position: relative;
     padding-top: 5em;
     .views-exposed-widget.views-widget-filter-combine,
@@ -1496,7 +1547,6 @@ body:not(.page-case-study-finder) .block.block-views .views-exposed-widgets {
         width: 20%;
         clear: none !important;
         //border: green dotted 1px;
-   
     }
     .views-exposed-widget.views-widget-filter-combine {
         width: 78%;
@@ -1522,18 +1572,75 @@ body:not(.page-case-study-finder) .block.block-views .views-exposed-widgets {
     }
 }
 
+// --- colorbox pop-up --- //
+#cboxWrapper {
+    .view-mode-colorbox {
+        .node__title.node-title {
+            display: none;
+        }
+    }
+    hr {
+        display: none;
+    }
+}
+
 // --- Marketplace --- //
-
 @import "marketplace";
-
 // --- Community --- //
-
 @import "community";
-
 // --- Case Study --- //
-
 @import "casestudy";
-
 // --- Groups --- //
-
 @import "groups";
+// --- EU Cookie banner --- //
+.sliding-popup-top {
+    background: #00aaad;
+    width: 100%;
+    padding: 1.25em 0 0.5em 0;
+    h2 {
+        color: #fff;
+        font-size: 1.2em;
+        background: transparent!important;
+        padding: 0!important;
+        -moz-border-radius: 0!important;
+        -webkit-border: 0!important;
+        border: 0!important;
+        -moz-border-radius: 0!important;
+        -webkit-border-radius: 0!important;
+        border-radius: 0px!important;
+        position: relative!important;
+        margin: 0 0 0.5em 0!important;
+    }
+    button {
+        font-size: 1em;
+        &:hover {
+            background: #00494d!important;
+            border-color: #00494d!important;
+            color: #fff !important;
+        }
+    }
+    p {
+        color: #fff;
+    }
+}
+
+.profile-button-links .btn {
+    float: left;
+    margin: 1em 1em 0 0;
+    font-size: 1em;
+    &.cancel {
+        background: #fff;
+        &:hover {
+            color: #fff!important;
+            background: #00494d!important;
+        }
+    }
+}
+
+#user-cancel-confirm-form input#edit-cancel {
+    margin-left: 1em
+}
+
+#user-cancel-confirm-form input#edit-submit {
+    margin-right: 1em
+}
