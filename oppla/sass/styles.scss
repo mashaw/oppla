@@ -121,9 +121,10 @@ p,
 dd,
 ul,
 ol,
+
 ul:not(.quicktabs-tabs),
 ul:not(.tabs-primary),
-ul:not(.tabs-primary) li:last-child {
+ul:not(.tabs-primary):not(.menu) li:last-child   {
     margin: 0 0 1em 0;
 }
 
@@ -527,6 +528,7 @@ a#logo.header__logo {
     font-size: 110%;
 }
 
+.front-page-block ,
 #block-views-front-page-banner-block-block,
 #block-block-6,
 #block-block-13 {
@@ -549,6 +551,7 @@ a#logo.header__logo {
 }
 
 @media all and (max-width: 768px) {
+    .front-page-block ,
     #block-views-front-page-banner-block-block,
     #block-block-6,
     #block-block-13 {
