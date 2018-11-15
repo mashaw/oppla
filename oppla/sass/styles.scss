@@ -60,6 +60,7 @@ body {
     padding: 0;
     margin: 0;
     &:not(.cke_editable) {}
+    * {box-sizing: border-box;}
 }
 
 h1,
@@ -121,10 +122,9 @@ p,
 dd,
 ul,
 ol,
-
 ul:not(.quicktabs-tabs),
 ul:not(.tabs-primary),
-ul:not(.tabs-primary):not(.menu) li:last-child   {
+ul:not(.tabs-primary) li:last-child {
     margin: 0 0 1em 0;
 }
 
@@ -197,6 +197,7 @@ table {
         }
     }
 }
+
 hr {
     color: $opplaMidGrey;
     height: 2px;
@@ -312,7 +313,9 @@ a#logo.header__logo {
     width: 300px;
     @include opplaLozenge;
     .custom-search-box.form-text {
+        //background:#bada55;
         width: 282px;
+        width:90%;
         float: none;
         font-size: 1em;
         padding: 1px 0 5px 0;
@@ -354,6 +357,8 @@ a#logo.header__logo {
         }
         a {
             @include btn-white(1em);
+            line-height: 1.4;
+            padding: 0.15em 0.4em;
         }
         .ask {
             background: $opplaDarkBlue;
@@ -396,7 +401,7 @@ a#logo.header__logo {
     #block-search-form {
         width: 238px;
         .custom-search-box.form-text {
-            width: 220px;
+            //width: 220px;
         }
     }
 }
@@ -423,7 +428,7 @@ a#logo.header__logo {
     #block-search-form {
         width: 218px;
         .custom-search-box.form-text {
-            width: 200px;
+            //width: 200px;
         }
     }
 }
@@ -457,7 +462,7 @@ a#logo.header__logo {
         padding-right: 3%;
         padding-left: 3%;
         .custom-search-box.form-text {
-            width: inherit;
+            //width: inherit;
             width: 80%;
             display: inline-block;
             margin-right: 24px;
@@ -528,7 +533,7 @@ a#logo.header__logo {
     font-size: 110%;
 }
 
-.front-page-block ,
+.front-page-block,
 #block-views-front-page-banner-block-block,
 #block-block-6,
 #block-block-13 {
@@ -551,7 +556,7 @@ a#logo.header__logo {
 }
 
 @media all and (max-width: 768px) {
-    .front-page-block ,
+    .front-page-block,
     #block-views-front-page-banner-block-block,
     #block-block-6,
     #block-block-13 {
@@ -941,14 +946,14 @@ table.case-study {
     display: block;
     margin-right: -1.5%;
     width: 101.5%;
-    li {padding-bottom: 1em!important;
+    li {
+        padding-bottom: 1em!important;
         //border: 1px solid purple;
         text-align: center;
         width: 31.5%;
         margin-right: 1.5% !important;
         display: block;
         float: left;
-        
         img {
             width: 100%;
         }
@@ -962,11 +967,10 @@ table.case-study {
             &:hover {
                 background: $opplaMidGrey;
             }
-           
         }
-         &:nth-child(3n+1) {
-                clear: left;
-            }
+        &:nth-child(3n+1) {
+            clear: left;
+        }
     }
     @media all and (max-width: 768px) {
         li {
@@ -987,10 +991,12 @@ table.case-study {
             width: 98.5%;
             margin-right: 1.5% !important;
             padding-bottom: 0!important;
-            float: none;clear:both
+            float: none;
+            clear: both
         }
     }
 }
+
 
 /* --- FORMS --- */
 
@@ -1646,4 +1652,95 @@ body:not(.page-case-study-finder):not(.page-case-studies):not(.escom) .block.blo
 
 #user-cancel-confirm-form input#edit-submit {
     margin-right: 1em
+}
+
+
+
+// --- FEATURE BOXES --- //
+
+.content_blocks .region-content-blocks #block-views-feature-box-block-block.block {
+    width: 100%;
+    float: none;
+    margin: 0;
+    .block-content {
+        background: transparent;
+        border-top: none;
+    }
+}
+
+.box_span {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.paragraphs-item-feature {
+    display: flex;
+    width: 100%;
+
+    .two-column & {
+        @media all and (min-width: 768px) {
+            width: 50%;
+        }
+    }
+    .three-column & {
+        @media all and (min-width: 768px) {
+            width: 33.33%;
+        }
+    }
+    .content {
+        //background: $opplaSand;
+        background: $opplaLightGrey;
+        padding: 0;
+        margin: 0 0.5em 1em;
+        width: 100%;
+        @include opplaTopLozenge;
+        @media all and (min-width: 480px) {
+        
+            
+        }
+        .flex-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            //padding: 0px;
+            width: 100%;
+            p {//background: #BADA55;
+                margin: 0 0 4px 0;
+               flex: 1 0 0%
+            }
+            h3 {
+                @include headReg;
+                font-size: 1.25em;
+                color: #fff;
+                margin: -10px -10px 10px -10px;
+                padding: 15px 10px ;
+                background: $opplaDarkGrey;
+                @include opplaTopLozenge;
+                border-bottom: 4px solid #fff;
+            }
+            img {
+                margin:  0 0 0.5em 0;
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+            @media all and (min-width: 480px) {
+                img {
+                    float: right;
+                    clear: right;
+                    margin: 0 0 1em 1em;
+                    width: 48.5%;
+                }
+                
+            }
+            .button-wrapper {
+                text-align: right;
+                .btn {
+                    //width: auto;
+                    // float: right;
+                    //clear: right
+                }
+            }
+        }
+    }
 }

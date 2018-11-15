@@ -176,8 +176,30 @@
                 }
             }
             
+
+.node-post.node-teaser  .field-name-field-image {margin: 1em 0}
             
-            .node-post.node-teaser  .field-name-field-image {margin: 1em 0}
+
+                .view.view-og-extras-members.view-display-id-page_1>.view-content {
+                    .profile {
+                        margin: 0;
+                        clear: none;
+                    }
+                    @media (min-width: 768px) {
+                        margin-right: -2%;
+                        >.views-row {
+                            float: left;
+                            width: 48%;
+                            margin-right: 2%;
+                            &.views-row-odd {
+                                clear: left;
+                            }
+                        }
+                    }
+                }      
+            
+            
+            
             
 // ==== ESCom mini-site ==== //
            @import "groups_escom";

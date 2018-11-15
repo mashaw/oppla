@@ -242,13 +242,14 @@ $escomGreen:#60bb46;
 @mixin btn-white($fontsize) {
 	@include headBold;
 	font-size: $fontsize;
+    line-height:1;
 	text-transform: uppercase;
 	color: $opplaBlue!important;
 	display: inline-block;
 	background: #fff;
 	border: 2px solid $opplaBlue;
 	@include opplaLozenge();
-	padding: 0.15em 0.4em;
+	padding: 0.4em 0.4em;
 	text-decoration: none!important;
 	&:hover {
 		background: $opplaBlue!important;
@@ -330,7 +331,7 @@ $escomGreen:#60bb46;
 	float: left;
 	margin-left: 1.5%!important;
 	width: 48.5%;
-	&:nth-child(odd) {
+    &:nth-child(odd) {
 		clear: left;
 	}
 	@media all and (max-width: 768px) {
@@ -344,7 +345,7 @@ $escomGreen:#60bb46;
 	float: left;
 	margin-left: 1.5%!important;
 	width: 31.833%;
-	&:nth-child(3n-2) {
+    &:nth-child(3n-2) {
 		clear: left
 	}
 	@media all and (max-width: 768px) {
@@ -452,4 +453,13 @@ $escomGreen:#60bb46;
 		float: none;
 		clear: both;
 	}
+}
+
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
 }

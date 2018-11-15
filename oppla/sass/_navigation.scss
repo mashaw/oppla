@@ -365,30 +365,32 @@
             padding: 0;
         }
         .menu li {
-            background: #bada55;
+            //background: #bada55;
             margin: 0;
             border-bottom: 1px solid #fff;
+            &:last-child {margin-bottom:0}
             a {
                 @include headBold;
-                color: $opplaDarkGrey;
+                color: $opplaBlue;
                 font-size: 0.9em;
-                background: $opplaLightGrey;
+                background: $opplaTint;
                 text-decoration: none;
                 display: block;
                 padding: 6px;
-                border-left: 5px solid $opplaDarkMidGrey;
+                border-left: 5px solid $opplaBlue;
                 position: relative;
-                &:hover {
+                &:hover {color: $opplaDarkGrey;
                     border-color: $opplaDarkGrey;
                 }
                 &:active {
                     border-color: $opplaBlue;
-                    color: $opplaBlue;
+                    color: $opplaDarkGrey;
+                    background: $opplaLightGrey;
                 }
                 &.active {
-                    border-color: $opplaBlue;
-                    color: $opplaBlue;
-                    background: $opplaTint;
+                    border-color: $opplaDarkGrey;
+                    color: $opplaDarkGrey;
+                    background: $opplaLightGrey;
                     cursor: default;
                     text-decoration: none;
                     &:after {color: $opplaBlue;}
@@ -399,9 +401,6 @@
                 padding-right: 25px;
                 &:after {
                     @include icon-font("\e815");
-                    //color: $opplaBlue;
-                    //font-size: 90%;
-                    //float:right;
                     position: absolute;
                     right: 3px;
                     top: 25%;

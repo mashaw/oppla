@@ -28,7 +28,10 @@ input[type="submit"]  ,
 }
 
 
-.btn.small {@include btn-white(1em);}
+.btn.small ,
+#edit-cancel {@include btn-white(1em);}
+
+#edit-cancel {margin-left:1em}
     
     
     

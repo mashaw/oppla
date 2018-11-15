@@ -208,24 +208,24 @@ function oppla_preprocess_page(&$variables) {
         break;
     }
   }
-  
+
 
   if (isset($variables['node']->type)) {
     // If the content type's machine name is "my_machine_name" the file
     // name will be "page--my-machine-name.tpl.php".
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
 
-} 
+}
   }
-   
-   
- 
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+
+
+
 
 /**
  * Override status messages.
@@ -287,10 +287,21 @@ function oppla_menu_link(array $variables) {
 	return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
-function oppla_preprocess_node(&$vars) {
-  if ($vars['node']->type == 'profile' && $vars['view_mode'] == 'community_node') {
-    $vars['theme_hook_suggestions'][] = 'node__profile__community_node';
+function oppla_preprocess_node($variables) {
+
+
+  if (module_exists('og')) {
+      unset($variables['content']['group_group']);
+
+}
+
+  if ($variables['node']->type == 'profile' && $variables['view_mode'] == 'community_node') {
+    $variables['theme_hook_suggestions'][] = 'node__profile__community_node';
   }
+
+
+
+
 }
 
 
@@ -313,7 +324,6 @@ function oppla_date_display_single($variables) {
   // Add remaining message and return.
   return $output . $show_remaining_days;
 }
-
 
 
 
