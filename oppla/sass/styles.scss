@@ -1002,6 +1002,61 @@ table.case-study {
 
 @import "forms";
 
+/* --- CASE STUDY FORM --- */
+
+.section-case-study-form {
+    h2,
+    h3,
+    dt,
+    .field .field-label,
+    legend {
+        @include headBold;
+        color: #6D6E71;
+        text-transform: uppercase;
+    }
+    
+    .form-wrapper {margin-bottom:15px;
+        .form-wrapper {margin-bottom:0;}
+    
+    }
+    
+    
+    
+    
+    
+    .filter-wrapper.form-wrapper {
+        padding: 0;
+        .fieldset-wrapper {
+            background: #ededed;
+            border-bottom: none;
+            .fieldset-wrapper {
+                padding: 0
+            }
+        }
+    }
+    .group_enroute.form-wrapper .fieldset-wrapper {
+        padding: 15px;
+        background: #fff;
+        background:$opplaLightestGrey;
+        border: 2px solid #ededed;
+        .form-wrapper {margin-bottom:15px;
+        .form-wrapper {margin-bottom:0;}
+    
+    }
+        .fieldset-wrapper {
+            background: #ededed;padding: 0;
+        }
+    }
+    .description {
+        font-size: 85%;
+        background: #ededed;
+        padding: 8px;
+        margin: 0;
+        p {
+            margin-bottom: 3px
+        }
+    }
+}
 /* === QUESTION VIEW === */
 
 .sidebar .views-exposed-widget {
