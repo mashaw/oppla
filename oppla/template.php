@@ -326,6 +326,48 @@ function oppla_date_display_single($variables) {
 }
 
 
+function oppla_form_user_register_form_alter(&$form, &$form_state) {
+  $options = $default_value = $hidden = array();
+
+  // Determine the lists to which a user can choose to subscribe.
+  // Determine to which other list a user is automatically subscribed.
+
+  foreach (simplenews_categories_load_multiple() as $list) {
+    $subscribe_new_account = $list->new_account;
+    $opt_inout_method = $list->opt_inout;
+    if (($subscribe_new_account == 'on' || $subscribe_new_account == 'off') && ($opt_inout_method == 'single' || $opt_inout_method == 'double')) {
+      $options[$list->tid] = check_plain(_simplenews_newsletter_name($list));
+      if ($subscribe_new_account == 'on') {
+        $default_value[] = $list->tid;
+      }
+    }
+    else {
+      if ($subscribe_new_account == 'silent' || ($subscribe_new_account == 'on' && $opt_inout_method == SIMPLENEWS_OPT_INOUT_HIDDEN)) {
+        $hidden[] = $list->tid;
+      }
+    }
+  }
+
+  if (count($options)) {
+    // @todo Change this text: use less words;
+    $form['simplenews'] = array(
+      '#type' => 'fieldset',
+      '#description' => t('I would like to receive updates from Oppla by email'),
+      '#weight' => 10,
+    );
+    $form['simplenews']['newsletters'] = array(
+      '#type' => 'checkboxes',
+      '#options' => $options,
+      '#default_value' => $default_value,
+    );
+  }
+  if (count($hidden)) {
+    $form['simplenews_hidden'] = array(
+      '#type' => 'hidden',
+      '#value' => implode(',', $hidden),
+    );
+  }
+}
 
 
 ?>

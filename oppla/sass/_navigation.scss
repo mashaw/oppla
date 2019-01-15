@@ -26,9 +26,12 @@
     .toggler {
         @include btn-white(1em);
         float: left;
+         display: inline-block;
         &:before {
             @include icon-font('\e80e');
         }
+        
+       
     }
     
     .open .toggler {
@@ -44,11 +47,16 @@
         }
     }
     /* --- Mobile/Tablet menu --- */
+
+
+@media all and (min-width: 769px) {
+        .toggler {
+            display: none;
+        }
+}
     
     @media all and (max-width: 768px) {
-        .toggler {
-            display: inline-block
-        }
+        
         #navigation {
             display: none;
         }
@@ -138,9 +146,9 @@
     /* --- Desktop menu --- */
     
     @media all and (min-width: 768px) {
-        .toggler {
-            display: none
-        }
+        //.toggler {
+            //display: none
+       // }
         #navigation {
             border-top: 3px solid $opplaMidGrey;
             margin: 1em 0 0 0;
@@ -364,8 +372,10 @@
             margin: 0;
             padding: 0;
         }
-        .menu li {
+        .menu li ,
+           .ui-accordion .ui-accordion-content  {
             //background: #bada55;
+               padding:0;
             margin: 0;
             border-bottom: 1px solid #fff;
             &:last-child {margin-bottom:0}

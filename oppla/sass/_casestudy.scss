@@ -50,6 +50,7 @@ a.clickable-terms {
 .page-case-study-finder #page,
 .node-type-case-study #page {
 	background: $opplaLightGrey;
+
 }
 
 
@@ -181,6 +182,45 @@ a.clickable-terms {
 			//}
 		}
 	}
+}
+
+
+// === Enroute themes === //
+#block-views-enroute-themes-block-1 {}
+
+.enroute-themes>.view-content>.views-row {
+    @include two-column();
+    background: #fff;
+    display: flex;
+    margin-bottom: 8px;
+    @include border-radius(15px);
+}
+
+.enroute-themes {
+    clear: both;
+    float: none;
+    @include clearfix();
+    .view-content {margin-left: -1.5%;
+        display: flex;
+        flex-wrap: wrap;
+        .views-row {
+            .vocabulary-enroute-themes {
+                padding: 10px;
+                h3 {
+                    font-size: 1.25em;
+                    margin:0
+                }
+                
+                ul {
+		padding-left: 1em;
+		li {
+			@include bullets($opplaBlue);
+		}
+	}
+                
+            }
+        }
+    }
 }
 
 

@@ -450,5 +450,73 @@ fieldset.captcha.form-wrapper {
 
 	}
 
+// === REGISTRATION FORM === //
+#edit-field-profile-ref-und .fieldset-wrapper {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#edit-simplenews,
+.form-item-field-oppla-terms-of-use-und {
+    background: #fff;
+    margin: 0;
+    padding: 10px 15px
+}
+
+#edit-simplenews {
+    padding-top: 1px
+}
+
+.form-item-field-oppla-terms-of-use-und {
+    padding-bottom: 1px;
+    .description {
+        margin: 0;
+    }
+}
+
+.menu label   ,
+.menu input[type='radio']:not(:checked)~label   {
+    color: $opplaBlack;
+    cursor: pointer;
+    background: $opplaMidGrey;
+    padding: 5px 7px;
+    display: block;
+    &:after  {
+        float:right;
+        @include icon-font('\e811');
+    }
+}
+.menu input[type='radio']{
+    display: none
+}
+.menu  ul.expanding ,
+.menu input[type='radio']:not(:checked)+ul.expanding {
+    max-height: 0;
+    overflow:hidden;
+//transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.menu input[type='radio']:checked+ul.expanding {
+    max-height:100%;
+//transition: max-height  1s ease-in-out;
+}
 
 
+.menu input[type='radio']:checked~label {
+    background: $opplaDarkMidGrey;
+    &:after {float:right;
+			@include icon-font('\e815');
+		}
+}
+
+.December2018 {
+    input[type='radio']:not(#December2018)+ul.expanding {
+        max-height: 0;
+    }
+    input[type='radio']:not(#December2018):checked+ul.expanding {
+        max-height: 100%;
+    }
+    input[type='radio']#December2018+ul.expanding {
+        max-height: 100%;
+    }
+}
