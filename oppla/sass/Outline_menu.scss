@@ -1,0 +1,92 @@
+// === Outline menu === //
+
+.menu label   ,
+.menu input[type='checkbox']:not(:checked)+label   {
+    color: $opplaBlack;
+    cursor: pointer;
+    background: $opplaMidGrey;
+    padding: 5px 7px;
+    display: block;
+    &:after  {
+        float:right;
+        @include icon-font('\e815');
+    }
+}
+.menu input[type='checkbox']{
+  display: none
+}
+.menu input[type='checkbox']:checked+label {
+    background: $opplaDarkMidGrey;
+    &:after {
+        @include icon-font('\e811');
+    }
+}
+
+.menu ul.expanding {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0, 1, 0, 1);
+}
+
+.menu input[type='checkbox']:checked+label+ul.expanding {
+    max-height: 100%;
+    transition: max-height 1s ease-in-out;
+}
+
+@mixin outline($date) {
+    .#{$date} .menu input[type='checkbox'] {
+        &##{$date}+label+ul.expanding {
+            max-height: 100%;
+        }
+        &##{$date}+label {
+            background: $opplaDarkMidGrey;
+            &:after {
+                @include icon-font('\e811');
+            }
+        }
+        &##{$date}:checked+label+ul.expanding {
+            max-height: 0;
+        }
+        &##{$date}:checked+label {
+            background: $opplaMidGrey;
+            &:after {
+                @include icon-font('\e815');
+            }
+        }
+    }
+}
+@include outline('December2018');
+@include outline('January2019');
+
+
+
+
+ <!--<?php if ($is_first): ?>
+ <?php else: ?>
+    <input type="checkbox" name="date" id="<?php print $output_stripped; ?>"><label for="<?php print $output_stripped; ?>"><?php print $output; ?></label>
+ <?php endif; ?>
+<?php if ( $fields['nid']->content == arg(1) ):  ?>
+
+
+
+
+ <?php else: ?>
+    <input type="checkbox" name="date" id="<?php print $output_stripped; ?>"><label for="<?php print $output_stripped; ?>"><?php print $output; ?></label>
+ <?php endif; ?>
+
+
+
+ <?php $nid = strip_tags($fields['nid']->content);?>
+
+ <?php if ($is_first = true):  ?>
+    <?php print $nid ?>
+    
+    
+
+
+
+
+
+
+
+-->

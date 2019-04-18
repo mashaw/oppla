@@ -6,6 +6,73 @@
 /*/ === Colours === /*/
 /*/ === Fonts === /*/
 /*/ === Shapes === /*/
+/*/  === INLINE IMAGES ===  /*/
+/* line 471, ../sass/_mixins.scss */
+img.imgtoright,
+img.imgtoright-quarter {
+  float: right;
+  margin: 0 0 10px 2%;
+  clear: right;
+  max-width: 48%;
+  width: 480px;
+}
+
+/* line 480, ../sass/_mixins.scss */
+img.imgtoleft,
+img.imgtoleft-quarter {
+  float: left;
+  margin: 0 2% 15px 0;
+  clear: left;
+  max-width: 48%;
+  width: 480px;
+}
+
+/* line 489, ../sass/_mixins.scss */
+img.imgtomiddle {
+  float: none;
+  margin: 15px auto;
+  clear: both;
+  display: block;
+}
+
+/* line 496, ../sass/_mixins.scss */
+img.imgtoleft-quarter,
+img.imgtoright-quarter {
+  width: 240px;
+  max-width: 23%;
+}
+
+/* line 502, ../sass/_mixins.scss */
+img.img-thumbnail {
+  max-width: 23%;
+  float: left;
+  margin: 0 0 2% 10px;
+}
+
+@media all and (max-width: 768px) {
+  /* line 509, ../sass/_mixins.scss */
+  img.imgtoright,
+  img.imgtoleft {
+    max-width: 48%;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 516, ../sass/_mixins.scss */
+  img.imgtoright,
+  img.imgtoleft {
+    float: none;
+    margin: 10px auto;
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+
+  /* line 524, ../sass/_mixins.scss */
+  img.imgtoleft-quarter,
+  img.imgtoright-quarter {
+    max-width: 48%;
+  }
+}
 /* HTML element (SMACSS base) rules */
 /**
  * @file

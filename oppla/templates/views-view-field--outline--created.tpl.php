@@ -20,7 +20,8 @@
  * The above will guarantee that you'll always get the correct data,
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
- */
+ *  <input type="checkbox" name="date" id="<?php print $output_stripped; ?>"><label for="<?php print $output_stripped; ?>"><?php print $output; ?></label>
+  */
 ?>
 
 
@@ -28,16 +29,14 @@
     global $is_first;
     if(!isset($is_first)) $is_first = true;
     else $is_first = false;
-
     $output_stripped = str_replace(' ', '', $output);
+    $this_node = arg(1);
+    $row_node = $row->nid;
 ?>
 
+ <?php if ( $row_node == $this_node ):  ?>
+  <input type="checkbox" name="date" id="<?php print $output_stripped; ?> "><label for="<?php print $output_stripped; ?>"><?php print $output; ?></label>
+ <?php else: ?>
+  <input type="checkbox" name="date" id="<?php print $output_stripped; ?>"><label for="<?php print $output_stripped; ?>"><?php print $output; ?></label>
+  <?php endif; ?>
 
-
-
-
-<?php if ($is_first): ?>
-   <label for="<?php print $output_stripped; ?>"><?php print $output; ?></label><input type="radio" name="date" id="<?php print $output_stripped; ?>" checked >
-  <?php else: ?>
-    <label for="<?php print $output_stripped; ?>"><?php print $output; ?></label><input type="radio" name="date"  id="<?php print $output_stripped; ?>"   >
- <?php endif; ?>

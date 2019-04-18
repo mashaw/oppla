@@ -41,6 +41,8 @@
 <p>Follow <a href="https://twitter.com/OpplaCommunity?pk_campaign=Outline">Oppla on Twitter</a> <img src="https://oppla.eu/sites/default/files/images/newsletter/twitter.png"   class="twitter"/>
 
 <p><a href="https://oppla.eu/node/19144?pk_campaign=Outline">View in browser</a></p>
+    
+<p><a href="<?php echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?>"></a>p>
 
   <?php else: ?>
   -- <?php print $unsubscribe_text ?>: [simplenews-subscriber:unsubscribe-url]
